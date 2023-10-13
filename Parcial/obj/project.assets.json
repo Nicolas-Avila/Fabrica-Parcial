@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\parcial\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
       "projectName": "Parcial",
-      "projectPath": "C:\\Users\\nicol\\Desktop\\parcial\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
+      "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Desktop\\parcial\\Avila.Daniel.Parcial\\Parcial\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\nicol\\Desktop\\parcial\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Desktop\\parcial\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj"
+            "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj"
             }
           }
         }

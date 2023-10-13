@@ -4,7 +4,7 @@ namespace Parcial
 {
     public partial class Inicio : Form
     {
-        
+
 
         public Inicio()
         {
@@ -17,30 +17,26 @@ namespace Parcial
             string nombre = this.nombre.Text;
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
-            
 
-            foreach (Operario operario in Listas.IniciosOperario)
+                   
+           if( Operario.Ingreso(nombre, apellido, id))
             {
-               
-                if (operario.Nombre == nombre && operario.Apellido == apellido && operario.Id == id)
-                {
-                    FormOperador formOperador = new FormOperador(this);
-                    this.Hide();
-                    formOperador.Show();
-                    break;
-                }
+                FormOperador formOperador = new FormOperador(this);
+                this.Hide();
+                formOperador.Show();
+                
+            }
+           
+           if(Supervisor.Inicio(nombre, apellido, id))
+            {
+                FormSupervisor formSupervisor = new FormSupervisor(this);
+                this.Hide();
+                formSupervisor.Show();
+                
             }
 
-            foreach (Supervisor supervisor in Listas.IniciosSupervisor)
-            {
-                if (supervisor.Nombre == nombre && supervisor.Apellido == apellido && supervisor.Id == id)
-                {
-                    FormSupervisor formSupervisor = new FormSupervisor();
-                    this.Hide();
-                    formSupervisor.Show();
-                    break;
-                }
-            }
+
+
 
 
         }
@@ -48,19 +44,32 @@ namespace Parcial
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            Operario operario1 = new Operario("nico","avila",1);
-            Operario operario2 = new Operario("nico2", "avila2", 2);
+            Operario operario1 = new Operario("nico", "avila", 1);
+            Operario operario2 = new Operario("santiago", "varista", 2);
 
-            Supervisor supervisor1 = new Supervisor("Thiago", "tamos",1);
-            Supervisor supervisor2 = new Supervisor("Thiago2", "tamos2", 2);
+            Supervisor supervisor1 = new Supervisor("martin", "alcaraz", 5);
+            Supervisor supervisor2 = new Supervisor("luciano", "somas", 7);
 
             Listas.IniciosOperario.Add(operario1);
             Listas.IniciosOperario.Add(operario2);
-            
+
             Listas.IniciosSupervisor.Add(supervisor1);
             Listas.IniciosSupervisor.Add(supervisor2);
         }
 
-      
+        private void btnOperario_Click(object sender, EventArgs e)
+        {
+            this.nombre.Text = "nico";
+            this.apellido.Text = "avila";
+            this.id.Value = 1;
+        }
+
+        private void btnSupervisor_Click(object sender, EventArgs e)
+        {
+            this.nombre.Text = "martin";
+            this.apellido.Text = "alcaraz";
+            this.id.Value = 5;
+
+        }
     }
 }

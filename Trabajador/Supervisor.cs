@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,21 @@ namespace Trabajador
         {
 
         }
+
+        public static bool Inicio(string nombre, string apellido, int id)
+        {
+
+            foreach (Supervisor supervisor in Listas.IniciosSupervisor)
+            {
+                if (supervisor.Nombre == nombre && supervisor.Apellido == apellido && supervisor.Id == id)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+        }
+
 
     }
 }

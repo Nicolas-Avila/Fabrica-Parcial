@@ -12,9 +12,24 @@ namespace Parcial
 {
     public partial class FormSupervisor : Form
     {
-        public FormSupervisor()
+
+        private Inicio formularioInicio;
+        public FormSupervisor(Inicio formularioInicio)
         {
             InitializeComponent();
+            this.formularioInicio = formularioInicio;
+        }
+
+        private void FormSupervisor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formularioInicio.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MostrarOperario mostrarOperario = new MostrarOperario();
+            mostrarOperario.Show();
+
         }
     }
 }

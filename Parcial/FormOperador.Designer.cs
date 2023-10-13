@@ -36,7 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "FormOperador";
-            Text = "Form2";
+            Text = "Operador";
             FormClosing += FormOperador_FormClosing;
             ResumeLayout(false);
         }

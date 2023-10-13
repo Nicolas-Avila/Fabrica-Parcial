@@ -29,7 +29,6 @@ namespace Trabajador
             sb.AppendLine(id.ToString());
 
             return sb.ToString();
-
         }
 
 
