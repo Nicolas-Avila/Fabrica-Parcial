@@ -16,6 +16,13 @@ namespace Parcial
         {
             InitializeComponent();
             cuadroOperario.DataSource = Listas.IniciosOperario;
+            dataGridView1.DataSource = Inventario.ProductosMMadera;
+            dataGridView2.DataSource = Inventario.ProductosMMetal;
+            dataGridView3.DataSource = Inventario.ProductosSMadera;
+            dataGridView4.DataSource = Inventario.ProductoSMetal;
+
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,8 +30,6 @@ namespace Parcial
 
         }
 
-
-
-
+     
     }
 }

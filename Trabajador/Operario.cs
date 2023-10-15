@@ -11,9 +11,7 @@ namespace Trabajador
 {
     public class Operario : Empleado
     {
-
-
-        public Operario(string nombre, string apellido, int id) : base(nombre,apellido,id)
+       public Operario(string nombre, string apellido, int id) : base(nombre,apellido,id)
         {
                         
         }

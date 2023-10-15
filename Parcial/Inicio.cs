@@ -21,7 +21,7 @@ namespace Parcial
                    
            if( Operario.Ingreso(nombre, apellido, id))
             {
-                FormOperador formOperador = new FormOperador(this);
+                FormOperadores formOperador = new FormOperadores(this);
                 this.Hide();
                 formOperador.Show();
                 
@@ -31,16 +31,10 @@ namespace Parcial
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this);
                 this.Hide();
-                formSupervisor.Show();
-                
+                formSupervisor.Show();                
             }
 
-
-
-
-
         }
-
 
         private void Inicio_Load(object sender, EventArgs e)
         {

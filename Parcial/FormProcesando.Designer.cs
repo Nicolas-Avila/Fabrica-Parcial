@@ -1,6 +1,6 @@
 ﻿namespace Parcial
 {
-    partial class FormOperador
+    partial class FormProcesando
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            timer1 = new System.Windows.Forms.Timer(components);
+            label1 = new Label();
             SuspendLayout();
             // 
-            // FormOperador
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(77, 48);
+            label1.Name = "label1";
+            label1.Size = new Size(78, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Procesando...";
+            // 
+            // FormProcesando
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "FormOperador";
-            Text = "Operador";
-            FormClosing += FormOperador_FormClosing;
+            ClientSize = new Size(239, 111);
+            ControlBox = false;
+            Controls.Add(label1);
+            Name = "FormProcesando";
+            Text = "FormProcesando";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timer1;
+        private Label label1;
     }
 }

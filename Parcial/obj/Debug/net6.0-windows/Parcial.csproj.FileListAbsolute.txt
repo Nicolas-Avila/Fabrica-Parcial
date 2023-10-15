@@ -28,7 +28,6 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Par
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Trabajador.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Trabajador.pdb
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.csproj.AssemblyReference.cache
-C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormOperador.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormSupervisor.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Inicio.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.csproj.GenerateResource.cache
@@ -44,3 +43,6 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Par
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\ref\Parcial.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.MostrarOperario.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Properties.Resources.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormOperadores.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormAprobacion.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormProcesando.resources
