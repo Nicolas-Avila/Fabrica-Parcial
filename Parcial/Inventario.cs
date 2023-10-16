@@ -29,20 +29,30 @@ namespace Parcial
 
 
 
-        public static bool verificarStock(string mesa, string silla)
-    {
-        var cont = 0;
-        foreach (var item in Stock)
+        public static void StockMateriales(string material1 , string material2)
         {
 
+           
+            foreach (var componente in stock)
+            {
+                if (componente.Key == material1 && componente.Value > 0)
+                {
+                    stock[componente.Key] -= 1;
+                }
+                else if (componente.Key == material2 && componente.Value > 0)
+                {
+                    stock[componente.Key] -= 1;
+                }
+                else
+                {
+                   
+                }
+            }
 
-
-            
+ 
         }
-            return false;
-    }
 
-       
+
 
 
     }

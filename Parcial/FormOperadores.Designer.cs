@@ -35,23 +35,27 @@
             radioButton4 = new RadioButton();
             mesas = new GroupBox();
             sillas = new GroupBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             mesas.SuspendLayout();
             sillas.SuspendLayout();
             SuspendLayout();
             // 
             // Crear
             // 
-            Crear.Location = new Point(332, 326);
+            Crear.Location = new Point(213, 268);
             Crear.Name = "Crear";
             Crear.Size = new Size(104, 36);
             Crear.TabIndex = 0;
-            Crear.Text = "Crear";
+            Crear.Text = "Crear mesas";
             Crear.UseVisualStyleBackColor = true;
             Crear.Click += Crear_Click;
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.Checked = true;
             radioButton1.Location = new Point(54, 22);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(95, 19);
@@ -67,13 +71,13 @@
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(105, 19);
             radioButton2.TabIndex = 6;
-            radioButton2.TabStop = true;
             radioButton2.Text = "Silla de madera";
             radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
+            radioButton3.Checked = true;
             radioButton3.Location = new Point(37, 34);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(102, 19);
@@ -89,7 +93,6 @@
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(112, 19);
             radioButton4.TabIndex = 8;
-            radioButton4.TabStop = true;
             radioButton4.Text = "Mesa de madera";
             radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -102,7 +105,7 @@
             mesas.Size = new Size(199, 100);
             mesas.TabIndex = 9;
             mesas.TabStop = false;
-            mesas.Text = "groupBox1";
+            mesas.Text = "Mesa";
             // 
             // sillas
             // 
@@ -113,7 +116,37 @@
             sillas.Size = new Size(200, 100);
             sillas.TabIndex = 10;
             sillas.TabStop = false;
-            sillas.Text = "groupBox2";
+            sillas.Text = "Silla";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(494, 268);
+            button1.Name = "button1";
+            button1.Size = new Size(104, 36);
+            button1.TabIndex = 11;
+            button1.Text = "Crear sillas";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(357, 268);
+            button2.Name = "button2";
+            button2.Size = new Size(98, 34);
+            button2.TabIndex = 12;
+            button2.Text = "Crear el par";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(641, 383);
+            button3.Name = "button3";
+            button3.Size = new Size(127, 33);
+            button3.TabIndex = 13;
+            button3.Text = "Ver materiales";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // FormOperadores
             // 
@@ -121,6 +154,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkMagenta;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(sillas);
             Controls.Add(mesas);
             Controls.Add(Crear);
@@ -143,5 +179,8 @@
         private RadioButton radioButton4;
         private GroupBox mesas;
         private GroupBox sillas;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

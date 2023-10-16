@@ -21,15 +21,10 @@ namespace Parcial
             dataGridView3.DataSource = Inventario.ProductosSMadera;
             dataGridView4.DataSource = Inventario.ProductoSMetal;
 
-
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-     
+
     }
 }

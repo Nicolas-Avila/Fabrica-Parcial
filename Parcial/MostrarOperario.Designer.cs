@@ -54,7 +54,6 @@
             label1.Size = new Size(193, 30);
             label1.TabIndex = 0;
             label1.Text = "Operadores en Linea";
-            label1.Click += label1_Click;
             // 
             // cuadroOperario
             // 
@@ -95,7 +94,6 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(776, 52);
             dataGridView2.TabIndex = 4;
-            
             // 
             // dataGridView3
             // 
@@ -112,7 +110,7 @@
             dataGridView4.Location = new Point(12, 340);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowTemplate.Height = 25;
-            dataGridView4.Size = new Size(776, 52);
+            dataGridView4.Size = new Size(776, 98);
             dataGridView4.TabIndex = 6;
             // 
             // MostrarOperario
