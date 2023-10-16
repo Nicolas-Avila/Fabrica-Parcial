@@ -18,20 +18,19 @@ namespace Parcial
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
 
-                   
-           if( Operario.Ingreso(nombre, apellido, id))
+
+            if (Operario.Ingreso(nombre, apellido, id))
             {
-                FormOperadores formOperador = new FormOperadores(this);
-                this.Hide();
+                FormCrear formOperador = new FormCrear();
+               // this.Hide();
                 formOperador.Show();
-                
             }
-           
-           if(Supervisor.Inicio(nombre, apellido, id))
+
+            if (Supervisor.Inicio(nombre, apellido, id))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this);
                 this.Hide();
-                formSupervisor.Show();                
+                formSupervisor.Show();
             }
 
         }
@@ -56,6 +55,8 @@ namespace Parcial
             this.nombre.Text = "nico";
             this.apellido.Text = "avila";
             this.id.Value = 1;
+
+
         }
 
         private void btnSupervisor_Click(object sender, EventArgs e)

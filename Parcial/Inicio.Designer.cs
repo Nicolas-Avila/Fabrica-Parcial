@@ -52,7 +52,7 @@
             // 
             // apellido
             // 
-            apellido.Location = new Point(55, 108);
+            apellido.Location = new Point(55, 112);
             apellido.Name = "apellido";
             apellido.Size = new Size(100, 23);
             apellido.TabIndex = 1;
@@ -60,7 +60,7 @@
             // aceptar
             // 
             aceptar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            aceptar.Location = new Point(32, 214);
+            aceptar.Location = new Point(31, 216);
             aceptar.Name = "aceptar";
             aceptar.Size = new Size(147, 35);
             aceptar.TabIndex = 2;
@@ -70,26 +70,26 @@
             // 
             // id
             // 
-            id.Location = new Point(43, 168);
+            id.Location = new Point(55, 166);
             id.Name = "id";
-            id.Size = new Size(120, 23);
+            id.Size = new Size(100, 23);
             id.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(71, 34);
+            label1.Location = new Point(68, 30);
             label1.Name = "label1";
-            label1.Size = new Size(68, 21);
+            label1.Size = new Size(78, 25);
             label1.TabIndex = 5;
             label1.Text = "Nombre";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlLightLight;
+            label2.BackColor = Color.LightGoldenrodYellow;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(311, 19);
             label2.Name = "label2";
@@ -100,22 +100,22 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(71, 84);
+            label3.Location = new Point(68, 84);
             label3.Name = "label3";
-            label3.Size = new Size(67, 21);
+            label3.Size = new Size(78, 25);
             label3.TabIndex = 7;
             label3.Text = "Apellido";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(89, 134);
+            label4.Location = new Point(91, 138);
             label4.Name = "label4";
-            label4.Size = new Size(23, 21);
+            label4.Size = new Size(28, 25);
             label4.TabIndex = 8;
             label4.Text = "Id";
             // 
@@ -126,8 +126,8 @@
             groupBox1.Controls.Add(aceptar);
             groupBox1.Controls.Add(id);
             groupBox1.Controls.Add(nombre);
-            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(apellido);
+            groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(279, 59);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(211, 303);
@@ -136,21 +136,21 @@
             // 
             // btnSupervisor
             // 
-            btnSupervisor.Location = new Point(44, 415);
+            btnSupervisor.Location = new Point(408, 388);
             btnSupervisor.Name = "btnSupervisor";
-            btnSupervisor.Size = new Size(118, 33);
+            btnSupervisor.Size = new Size(133, 47);
             btnSupervisor.TabIndex = 10;
-            btnSupervisor.Text = "Supervisor";
+            btnSupervisor.Text = "Secion supervisor";
             btnSupervisor.UseVisualStyleBackColor = true;
             btnSupervisor.Click += btnSupervisor_Click;
             // 
             // btnOperario
             // 
-            btnOperario.Location = new Point(44, 376);
+            btnOperario.Location = new Point(222, 388);
             btnOperario.Name = "btnOperario";
-            btnOperario.Size = new Size(118, 33);
+            btnOperario.Size = new Size(133, 47);
             btnOperario.TabIndex = 11;
-            btnOperario.Text = "Operario";
+            btnOperario.Text = "Secion operario";
             btnOperario.UseVisualStyleBackColor = true;
             btnOperario.Click += btnOperario_Click;
             // 
@@ -158,7 +158,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkMagenta;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(802, 478);
             Controls.Add(btnOperario);
             Controls.Add(btnSupervisor);

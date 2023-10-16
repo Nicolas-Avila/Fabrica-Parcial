@@ -38,9 +38,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(53, 52);
             label1.Name = "label1";
-            label1.Size = new Size(127, 15);
+            label1.Size = new Size(142, 15);
             label1.TabIndex = 0;
-            label1.Text = "El supervisor lo aprobo";
+            label1.Text = "El producto fue aprobado";
             label1.Click += label1_Click;
             // 
             // FormAprobacion
@@ -50,7 +50,8 @@
             ClientSize = new Size(253, 119);
             Controls.Add(label1);
             Name = "FormAprobacion";
-            Text = "FormAprobacion";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Aprobado";
             ResumeLayout(false);
             PerformLayout();
         }

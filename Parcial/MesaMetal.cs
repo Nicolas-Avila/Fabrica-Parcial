@@ -13,12 +13,12 @@ namespace Parcial
 
         public MesaMetal(string metal, string plastico)
         {
-            this.metal = metal;
-            this.plastico = plastico;
+            this.Metal = metal;
+            this.Plastico = plastico;
         }
 
-        public string Material { get => metal; set => metal = value; }
-        public string Material_Extra { get => plastico; set => plastico = value; }
+        public string Metal { get => metal; set => metal = value; }
+        public string Plastico { get => plastico; set => plastico = value; }
     }
 }
 

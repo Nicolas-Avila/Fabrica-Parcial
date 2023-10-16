@@ -13,11 +13,11 @@ namespace Parcial
 
         public MesaMadera(string madera, string plastico)
         {
-            this.madera = madera;
-            this.plastico = plastico;
+            this.Madera = madera;
+            this.Plastico = plastico;
         }
 
-        public string Material{ get => madera; set => madera = value; }
-        public string Material_Extra { get => plastico; set => plastico = value; }
+        public string Madera { get => madera; set => madera = value; }
+        public string Plastico { get => plastico; set => plastico = value; }
     }
 }

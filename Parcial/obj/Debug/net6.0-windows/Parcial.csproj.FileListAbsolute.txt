@@ -43,7 +43,8 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Par
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\ref\Parcial.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.MostrarOperario.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Properties.Resources.resources
-C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormOperadores.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormAprobacion.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormProcesando.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Material.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormCrear.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormRellenar.resources

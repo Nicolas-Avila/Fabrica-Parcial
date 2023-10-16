@@ -54,7 +54,8 @@
             ControlBox = false;
             Controls.Add(label1);
             Name = "FormProcesando";
-            Text = "FormProcesando";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Procesando";
             ResumeLayout(false);
             PerformLayout();
         }

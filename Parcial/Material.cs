@@ -16,6 +16,7 @@ namespace Parcial
         {
             InitializeComponent();
             dataGridView1.DataSource = Inventario.Stock.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

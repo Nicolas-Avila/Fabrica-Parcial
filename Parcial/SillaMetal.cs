@@ -13,14 +13,12 @@ namespace Parcial
 
         public SillaMetal(string metal, string tela)
         {
-            this.metal = metal;
-            this.tela = tela;
+            this.Metal = metal;
+            this.Tela = tela;
         }
 
-        public string Material { get => metal; set => metal = value; }
-        public string Tapizado { get => tela; set => tela = value; }
-   
-
+        public string Metal { get => metal; set => metal = value; }
+        public string Tela { get => tela; set => tela = value; }
     }
 
 }
