@@ -20,17 +20,6 @@ namespace Trabajador
         public int Id { get => id; set => id = value; }
 
 
-        public string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine(nombre);
-            sb.AppendLine(apellido);
-            sb.AppendLine(id.ToString());
-
-            return sb.ToString();
-        }
-
 
     }
 }

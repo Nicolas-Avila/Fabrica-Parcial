@@ -44,11 +44,11 @@
             // 
             // Crear
             // 
-            Crear.Location = new Point(213, 268);
+            Crear.Location = new Point(512, 270);
             Crear.Name = "Crear";
             Crear.Size = new Size(104, 36);
             Crear.TabIndex = 0;
-            Crear.Text = "Crear mesas";
+            Crear.Text = "Crear sillas";
             Crear.UseVisualStyleBackColor = true;
             Crear.Click += Crear_Click;
             // 
@@ -111,26 +111,26 @@
             // 
             sillas.Controls.Add(radioButton1);
             sillas.Controls.Add(radioButton2);
-            sillas.Location = new Point(440, 122);
+            sillas.Location = new Point(445, 105);
             sillas.Name = "sillas";
-            sillas.Size = new Size(200, 100);
+            sillas.Size = new Size(195, 117);
             sillas.TabIndex = 10;
             sillas.TabStop = false;
             sillas.Text = "Silla";
             // 
             // button1
             // 
-            button1.Location = new Point(494, 268);
+            button1.Location = new Point(202, 270);
             button1.Name = "button1";
             button1.Size = new Size(104, 36);
             button1.TabIndex = 11;
-            button1.Text = "Crear sillas";
+            button1.Text = "Crear mesas";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(357, 268);
+            button2.Location = new Point(363, 270);
             button2.Name = "button2";
             button2.Size = new Size(98, 34);
             button2.TabIndex = 12;

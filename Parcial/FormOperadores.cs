@@ -29,10 +29,7 @@ namespace Parcial
         private void Crear_Click(object sender, EventArgs e)
         {
             string silla = this.sillas.Text;
-
-            FormProcesando formProcesando = new FormProcesando();
-
-            formProcesando.Show();
+                       
             foreach (Control item in sillas.Controls)
             {
                 if (item is RadioButton && ((RadioButton)item).Checked)
@@ -43,16 +40,34 @@ namespace Parcial
             }
             if (silla == "Silla de madera")
             {
-                SillaMadera sillaMadera = new SillaMadera("madera", "tela");
-                Inventario.ProductosSMadera.Add(sillaMadera);
-                Inventario.StockMateriales("madera", "tela");
 
+                if (Inventario.VerificarStock("madera", "tela"))
+                {
+                   SillaMadera sillaMadera = new SillaMadera("madera", "tela");
+                    Inventario.ProductosSMadera.Add(sillaMadera);
+                    Inventario.StockMateriales("madera", "tela");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
             if (silla == "Silla de metal")
             {
+                if (Inventario.VerificarStock("metal","tela")) { 
                 SillaMetal sillaMetal = new SillaMetal("metal", "tela");
                 Inventario.ProductoSMetal.Add(sillaMetal);
                 Inventario.StockMateriales("metal", "tela");
+                FormProcesando formProcesando = new FormProcesando();
+                formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
 
         }
@@ -60,9 +75,7 @@ namespace Parcial
         private void button1_Click(object sender, EventArgs e)
         {
             string mesa = this.mesas.Text;
-            FormProcesando formProcesando = new FormProcesando();
 
-            formProcesando.Show();
 
             foreach (Control item in mesas.Controls)
             {
@@ -73,25 +86,41 @@ namespace Parcial
             }
             if (mesa == "Mesa de metal")
             {
-                MesaMetal mesaMetal = new MesaMetal("metal", "plastico");
-                Inventario.ProductosMMetal.Add(mesaMetal);
-                Inventario.StockMateriales("metal", "plastico");
+                if (Inventario.VerificarStock("metal","plastico"))
+                {
+                    MesaMetal mesaMetal = new MesaMetal("metal", "plastico");
+                    Inventario.ProductosMMetal.Add(mesaMetal);
+                    Inventario.StockMateriales("metal", "plastico");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
 
             if (mesa == "Mesa de madera")
             {
-                MesaMadera mesaMadera = new MesaMadera("madera", "plastico");
-                Inventario.ProductosMMadera.Add(mesaMadera);
-                Inventario.StockMateriales("madera", "plastico");
+                if (Inventario.VerificarStock("madera", "plastico"))
+                {
+                    MesaMadera mesaMadera = new MesaMadera("madera", "plastico");
+                    Inventario.ProductosMMadera.Add(mesaMadera);
+                    Inventario.StockMateriales("madera", "plastico");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             string mesa = this.mesas.Text;
-            FormProcesando formProcesando = new FormProcesando();
 
-            formProcesando.Show();
 
             foreach (Control item in mesas.Controls)
             {
@@ -102,21 +131,38 @@ namespace Parcial
             }
             if (mesa == "Mesa de metal")
             {
-                MesaMetal mesaMetal = new MesaMetal("metal", "plastico");
-                Inventario.ProductosMMetal.Add(mesaMetal);
-                Inventario.StockMateriales("metal", "plastico");
+                if (Inventario.VerificarStock("metal", "plastico"))
+                {
+                    MesaMetal mesaMetal = new MesaMetal("metal", "plastico");
+                    Inventario.ProductosMMetal.Add(mesaMetal);
+                    Inventario.StockMateriales("metal", "plastico");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
 
             if (mesa == "Mesa de madera")
             {
-                MesaMadera mesaMadera = new MesaMadera("madera", "plastico");
-                Inventario.ProductosMMadera.Add(mesaMadera);
-                Inventario.StockMateriales("madera", "plastico");
+                if (Inventario.VerificarStock("madera", "plastico"))
+                {
+                    MesaMadera mesaMadera = new MesaMadera("madera", "plastico");
+                    Inventario.ProductosMMadera.Add(mesaMadera);
+                    Inventario.StockMateriales("madera", "plastico");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
 
             string silla = this.sillas.Text;
 
-            formProcesando.Show();
             foreach (Control item in sillas.Controls)
             {
                 if (item is RadioButton && ((RadioButton)item).Checked)
@@ -127,15 +173,29 @@ namespace Parcial
             }
             if (silla == "Silla de madera")
             {
-                SillaMadera sillaMadera = new SillaMadera("madera", "tela");
-                Inventario.ProductosSMadera.Add(sillaMadera);
-                Inventario.StockMateriales("madera", "tela");
+                if (Inventario.VerificarStock("madera","tela"))
+                {
+                    SillaMadera sillaMadera = new SillaMadera("madera", "tela");
+                    Inventario.ProductosSMadera.Add(sillaMadera);
+                    Inventario.StockMateriales("madera", "tela");
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
             if (silla == "Silla de metal")
             {
-                SillaMetal sillaMetal = new SillaMetal("metal", "tela");
-                Inventario.ProductoSMetal.Add(sillaMetal);
-                Inventario.StockMateriales("metal", "tela");
+                if (Inventario.VerificarStock("metal", "tela"))
+                {
+                    SillaMetal sillaMetal = new SillaMetal("metal", "tela");
+                    Inventario.ProductoSMetal.Add(sillaMetal);
+                    Inventario.StockMateriales("metal", "tela");
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
             }
 
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -41,12 +42,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(510, 397);
+            button2.Name = "button2";
+            button2.Size = new Size(129, 46);
+            button2.TabIndex = 1;
+            button2.Text = "Llenar stock";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // FormSupervisor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkMagenta;
             ClientSize = new Size(818, 457);
+            Controls.Add(button2);
             Controls.Add(button1);
             Name = "FormSupervisor";
             Text = "Supervisor";
@@ -57,5 +68,6 @@
         #endregion
 
         private Button button1;
+        private Button button2;
     }
 }

@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             label1 = new Label();
             cuadroOperario = new DataGridView();
             label2 = new Label();
@@ -57,7 +64,26 @@
             // 
             // cuadroOperario
             // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            cuadroOperario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            cuadroOperario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            cuadroOperario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             cuadroOperario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            cuadroOperario.DefaultCellStyle = dataGridViewCellStyle3;
             cuadroOperario.Location = new Point(12, 42);
             cuadroOperario.Name = "cuadroOperario";
             cuadroOperario.RowTemplate.Height = 25;
@@ -80,6 +106,14 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Location = new Point(12, 167);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -89,6 +123,14 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView2.Location = new Point(12, 224);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
@@ -98,6 +140,14 @@
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView3.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView3.Location = new Point(12, 282);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowTemplate.Height = 25;
@@ -106,11 +156,19 @@
             // 
             // dataGridView4
             // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.Window;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dataGridView4.DefaultCellStyle = dataGridViewCellStyle7;
             dataGridView4.Location = new Point(12, 340);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowTemplate.Height = 25;
-            dataGridView4.Size = new Size(776, 98);
+            dataGridView4.Size = new Size(776, 208);
             dataGridView4.TabIndex = 6;
             // 
             // MostrarOperario
@@ -118,7 +176,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkMagenta;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(839, 578);
             Controls.Add(dataGridView4);
             Controls.Add(dataGridView3);
             Controls.Add(dataGridView2);

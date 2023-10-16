@@ -9,12 +9,12 @@ namespace Parcial
     static class Inventario
     {
         private static Dictionary<string, int> stock = new Dictionary<string, int>()
-    {
-        {"madera",10 },
-        {"metal",10 },
-        {"plastico",10 },
-        {"tela",10 }
-    };
+        {
+            {"madera", 1 },
+            {"metal", 10 },
+            {"plastico", 10 },
+            {"tela", 1 }
+        };
 
         public static Dictionary<string, int> Stock { get => stock; set => stock = value; }
         public static List<SillaMadera> ProductosSMadera { get => productosSMadera; set => productosSMadera = value; }
@@ -27,12 +27,8 @@ namespace Parcial
         private static List<MesaMadera> productosMMadera = new List<MesaMadera>();
         private static List<MesaMetal> productosMMetal = new List<MesaMetal>();
 
-
-
-        public static void StockMateriales(string material1 , string material2)
+        public static void StockMateriales(string material1, string material2)
         {
-
-           
             foreach (var componente in stock)
             {
                 if (componente.Key == material1 && componente.Value > 0)
@@ -43,20 +39,34 @@ namespace Parcial
                 {
                     stock[componente.Key] -= 1;
                 }
-                else
-                {
-                   
-                }
             }
-
- 
         }
 
+        public static bool VerificarStock(string material1, string material2)
+        {
+            var cont = 0;
 
+            foreach (var componente in stock)
+            {
+                if (componente.Key == material1 && componente.Value > 0)
+                {
+                    cont += 1;
+                }
+                else if (componente.Key == material2 && componente.Value > 0)
+                {
+                    cont += 1;
+                }
+            }
+            if (cont == 2)
+            {
+                return true;
+            }
+            return false;
+        }
 
-
+        public static void LlenarStock()
+        {
+            // Implement your logic to fill the stock here.
+        }
     }
 }
-
-
-
