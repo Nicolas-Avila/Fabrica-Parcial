@@ -2,7 +2,7 @@
 
 namespace Trabajador
 {
-    public class Empleado
+    public abstract class Empleado
     {
         private string nombre;
         private string apellido;
@@ -19,7 +19,8 @@ namespace Trabajador
         public string Apellido { get => apellido; set => apellido = value; }
         public int Id { get => id; set => id = value; }
 
-
+        public abstract bool Ingreso(string nombre, string apellido, int id);
+        public abstract string Info();
 
     }
 }

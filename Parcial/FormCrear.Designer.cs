@@ -197,7 +197,7 @@
             Controls.Add(CrearSillas);
             Name = "FormCrear";
             Text = "Operario";
-            FormClosing += FormOperadores_FormClosing;
+            //FormClosing += FormOperadores_FormClosing;
             mesas.ResumeLayout(false);
             mesas.PerformLayout();
             sillas.ResumeLayout(false);

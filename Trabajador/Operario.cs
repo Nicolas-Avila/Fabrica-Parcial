@@ -16,7 +16,7 @@ namespace Trabajador
                         
         }
         
-        public static bool Ingreso (string nombre, string apellido, int id) {
+        public override bool Ingreso (string nombre, string apellido, int id) {
 
             foreach (Operario operario in Listas.IniciosOperario)
             {
@@ -28,6 +28,17 @@ namespace Trabajador
             }
                 return false;
         }
-        
+
+
+        public override string Info()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Bienvenido Operador");
+            sb.AppendLine($"Nombre: {Nombre}");
+            sb.AppendLine($"Apellido: {Apellido}");
+            sb.AppendLine($"Id: {Id}");
+            return sb.ToString();
+        }
+
     }
 }

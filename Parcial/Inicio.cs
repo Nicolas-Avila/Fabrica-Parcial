@@ -18,15 +18,19 @@ namespace Parcial
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
 
-
-            if (Operario.Ingreso(nombre, apellido, id))
+            Operario ingresanteOp = new Operario(nombre, apellido,id);
+            
+            if (ingresanteOp.Ingreso(nombre, apellido, id))
             {
                 FormCrear formOperador = new FormCrear();
                
                 formOperador.Show();
+                
             }
 
-            if (Supervisor.Inicio(nombre, apellido, id))
+            Supervisor ingresanteSu = new Supervisor(nombre, apellido, id);
+
+            if (ingresanteSu.Ingreso(nombre, apellido, id))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this);
                 this.Hide();
@@ -37,17 +41,21 @@ namespace Parcial
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            
             Operario operario1 = new Operario("nico", "avila", 1);
             Operario operario2 = new Operario("santiago", "varista", 2);
 
             Supervisor supervisor1 = new Supervisor("martin", "alcaraz", 5);
             Supervisor supervisor2 = new Supervisor("luciano", "somas", 7);
+            Supervisor supervisor5 = new Supervisor("hola", "hey", 9);
 
             Listas.IniciosOperario.Add(operario1);
             Listas.IniciosOperario.Add(operario2);
+            
 
             Listas.IniciosSupervisor.Add(supervisor1);
             Listas.IniciosSupervisor.Add(supervisor2);
+            Listas.IniciosSupervisor.Add(supervisor5);
         }
 
         private void btnOperario_Click(object sender, EventArgs e)
