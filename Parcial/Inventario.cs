@@ -64,9 +64,5 @@ namespace Parcial
             return false;
         }
 
-        public static void LlenarStock()
-        {
-            // Implement your logic to fill the stock here.
-        }
     }
 }

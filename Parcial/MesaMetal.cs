@@ -19,6 +19,28 @@ namespace Parcial
 
         public string Metal { get => metal; set => metal = value; }
         public string Plastico { get => plastico; set => plastico = value; }
+
+
+        public static void CrearMesaMetal(string mesa)
+        {
+            if (mesa == "Mesa de metal")
+            {
+                if (Inventario.VerificarStock("metal", "plastico"))
+                {
+                    MesaMetal mesaMetal = new MesaMetal("metal", "plastico");
+                    Inventario.ProductosMMetal.Add(mesaMetal);
+                    Inventario.StockMateriales("metal", "plastico");
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
+            }
+        }
+
+
     }
 }
 

@@ -22,7 +22,7 @@ namespace Parcial
             if (Operario.Ingreso(nombre, apellido, id))
             {
                 FormCrear formOperador = new FormCrear();
-               // this.Hide();
+               
                 formOperador.Show();
             }
 

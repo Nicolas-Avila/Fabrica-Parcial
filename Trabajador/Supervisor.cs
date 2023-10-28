@@ -23,7 +23,7 @@ namespace Trabajador
                 {
                     return true;
                 }
-                return false;
+                
             }
             return false;
         }

@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Crear = new Button();
+            CrearSillas = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
             radioButton4 = new RadioButton();
             mesas = new GroupBox();
             sillas = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            CrearMesa = new Button();
+            CrearTodo = new Button();
+            VerMaterial = new Button();
             label1 = new Label();
-            button4 = new Button();
+            Cerrar = new Button();
             mesas.SuspendLayout();
             sillas.SuspendLayout();
             SuspendLayout();
             // 
-            // Crear
+            // CrearSillas
             // 
-            Crear.Location = new Point(560, 292);
-            Crear.Name = "Crear";
-            Crear.Size = new Size(142, 38);
-            Crear.TabIndex = 0;
-            Crear.Text = "Crear sillas";
-            Crear.UseVisualStyleBackColor = true;
-            Crear.Click += Crear_Click;
+            CrearSillas.Location = new Point(560, 292);
+            CrearSillas.Name = "CrearSillas";
+            CrearSillas.Size = new Size(142, 38);
+            CrearSillas.TabIndex = 0;
+            CrearSillas.Text = "Crear sillas";
+            CrearSillas.UseVisualStyleBackColor = true;
+            CrearSillas.Click += CrearSillas_Click;
             // 
             // radioButton1
             // 
@@ -128,35 +128,35 @@
             sillas.TabStop = false;
             sillas.Text = "Sillas";
             // 
-            // button1
+            // CrearMesa
             // 
-            button1.Location = new Point(91, 292);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 38);
-            button1.TabIndex = 11;
-            button1.Text = "Crear mesas";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            CrearMesa.Location = new Point(91, 292);
+            CrearMesa.Name = "CrearMesa";
+            CrearMesa.Size = new Size(142, 38);
+            CrearMesa.TabIndex = 11;
+            CrearMesa.Text = "Crear mesas";
+            CrearMesa.UseVisualStyleBackColor = true;
+            CrearMesa.Click += CrearMesa_Click;
             // 
-            // button2
+            // CrearTodo
             // 
-            button2.Location = new Point(336, 175);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 44);
-            button2.TabIndex = 12;
-            button2.Text = "Crear el par";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            CrearTodo.Location = new Point(336, 175);
+            CrearTodo.Name = "CrearTodo";
+            CrearTodo.Size = new Size(125, 44);
+            CrearTodo.TabIndex = 12;
+            CrearTodo.Text = "Crear el par";
+            CrearTodo.UseVisualStyleBackColor = true;
+            CrearTodo.Click += CrearTodo_Click;
             // 
-            // button3
+            // VerMaterial
             // 
-            button3.Location = new Point(336, 318);
-            button3.Name = "button3";
-            button3.Size = new Size(125, 44);
-            button3.TabIndex = 13;
-            button3.Text = "Ver materiales";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            VerMaterial.Location = new Point(336, 318);
+            VerMaterial.Name = "VerMaterial";
+            VerMaterial.Size = new Size(125, 44);
+            VerMaterial.TabIndex = 13;
+            VerMaterial.Text = "Ver materiales";
+            VerMaterial.UseVisualStyleBackColor = true;
+            VerMaterial.Click += VerMaterial_Click;
             // 
             // label1
             // 
@@ -170,16 +170,16 @@
             label1.TabIndex = 14;
             label1.Text = "Construir productos";
             // 
-            // button4
+            // Cerrar
             // 
-            button4.BackColor = Color.RosyBrown;
-            button4.Location = new Point(54, 389);
-            button4.Name = "button4";
-            button4.Size = new Size(84, 33);
-            button4.TabIndex = 15;
-            button4.Text = "Cerrar";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            Cerrar.BackColor = Color.RosyBrown;
+            Cerrar.Location = new Point(54, 389);
+            Cerrar.Name = "Cerrar";
+            Cerrar.Size = new Size(84, 33);
+            Cerrar.TabIndex = 15;
+            Cerrar.Text = "Cerrar";
+            Cerrar.UseVisualStyleBackColor = false;
+            Cerrar.Click += Cerrar_Click;
             // 
             // FormCrear
             // 
@@ -187,14 +187,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
+            Controls.Add(Cerrar);
             Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(VerMaterial);
+            Controls.Add(CrearTodo);
+            Controls.Add(CrearMesa);
             Controls.Add(sillas);
             Controls.Add(mesas);
-            Controls.Add(Crear);
+            Controls.Add(CrearSillas);
             Name = "FormCrear";
             Text = "Operario";
             FormClosing += FormOperadores_FormClosing;
@@ -208,17 +208,17 @@
 
         #endregion
 
-        private Button Crear;
+        private Button CrearSillas;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private RadioButton radioButton3;
         private RadioButton radioButton4;
         private GroupBox mesas;
         private GroupBox sillas;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button CrearMesa;
+        private Button CrearTodo;
+        private Button VerMaterial;
         private Label label1;
-        private Button button4;
+        private Button Cerrar;
     }
 }

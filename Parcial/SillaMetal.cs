@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Parcial
 {
-    internal class SillaMetal
+    public class SillaMetal
     {
         private string metal;
         private string tela;
@@ -19,7 +16,26 @@ namespace Parcial
 
         public string Metal { get => metal; set => metal = value; }
         public string Tela { get => tela; set => tela = value; }
+    
+
+    public static void CrearSillaMetal(string silla)
+    {
+        if (silla == "Silla de metal")
+        {
+            if (Inventario.VerificarStock("metal", "tela"))
+            {
+                SillaMetal sillaMetal = new SillaMetal("metal", "tela");
+                Inventario.ProductoSMetal.Add(sillaMetal);
+                Inventario.StockMateriales("metal", "tela");
+                FormProcesando formProcesando = new FormProcesando();
+                formProcesando.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error: falta de producto");
+            }
+        }
     }
 
+    }
 }
-
