@@ -17,7 +17,7 @@ namespace Parcial
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void añadir_Click(object sender, EventArgs e)
         {
             int cantTela = (int)this.numericUpDown1.Value;
             int cantMetal = (int)this.numericUpDown2.Value;
@@ -26,7 +26,7 @@ namespace Parcial
 
             foreach (string material in Inventario.Stock.Keys)
             {
-                if(material == "madera")
+                if (material == "madera")
                 {
                     Inventario.Stock[material] += cantMadera;
                 }
@@ -34,11 +34,11 @@ namespace Parcial
                 {
                     Inventario.Stock[material] += cantTela;
                 }
-                else if(material == "plastico")
+                else if (material == "plastico")
                 {
                     Inventario.Stock[material] += cantPlastico;
                 }
-                else if(material == "metal")
+                else if (material == "metal")
                 {
                     Inventario.Stock[material] += cantMetal;
                 }
@@ -49,5 +49,7 @@ namespace Parcial
                 $"Cantidad de plástico: {cantPlastico.ToString()}";
             MessageBox.Show(mensaje);
         }
+
+
     }
 }

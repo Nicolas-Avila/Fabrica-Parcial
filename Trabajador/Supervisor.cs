@@ -14,6 +14,9 @@ namespace Trabajador
 
         }
 
+        /// <summary>
+        /// Verifica el ingreso de un operario con nombre, apellido e ID del supervisor.
+        /// </summary>
         public override bool Ingreso(string nombre, string apellido, int id)
         {
 
@@ -32,7 +35,7 @@ namespace Trabajador
         public override string Info()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Bienvenido Supervisor");
+            sb.AppendLine("Bienvenido Supervisor");
             sb.AppendLine($"Nombre: {Nombre}");
             sb.AppendLine($"Apellido: {Apellido}");
             sb.AppendLine($"ID: {Id}");

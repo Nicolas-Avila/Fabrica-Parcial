@@ -16,9 +16,11 @@ namespace Parcial
 
         public string Metal { get => metal; set => metal = value; }
         public string Tela { get => tela; set => tela = value; }
-    
 
-    public static void CrearSillaMetal(string silla)
+        /// <summary>
+        /// Método para crear una silla de matal y agregarla al inventario.
+        /// </summary>
+        public static void CrearSillaMetal(string silla)
     {
         if (silla == "Silla de metal")
         {

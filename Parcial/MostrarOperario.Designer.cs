@@ -64,7 +64,7 @@
             label1.Size = new Size(193, 30);
             label1.TabIndex = 0;
             label1.Text = "Operadores en Linea";
-            label1.Click += label1_Click;
+            
             // 
             // cuadroOperario
             // 

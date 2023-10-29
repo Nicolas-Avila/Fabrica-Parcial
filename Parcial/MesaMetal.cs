@@ -20,7 +20,9 @@ namespace Parcial
         public string Metal { get => metal; set => metal = value; }
         public string Plastico { get => plastico; set => plastico = value; }
 
-
+        /// <summary>
+        /// Método para crear una mesa de metal y agregarla al inventario.
+        /// </summary>
         public static void CrearMesaMetal(string mesa)
         {
             if (mesa == "Mesa de metal")

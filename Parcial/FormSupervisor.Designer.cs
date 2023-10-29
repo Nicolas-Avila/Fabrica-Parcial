@@ -45,7 +45,7 @@
             button1.TabIndex = 0;
             button1.Text = "Mostrar Informacion";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += masInfo_Click;
             // 
             // button2
             // 
@@ -55,7 +55,7 @@
             button2.TabIndex = 1;
             button2.Text = "Llenar stock";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += rellenar_Click;
             // 
             // label1
             // 
@@ -76,7 +76,7 @@
             button3.TabIndex = 3;
             button3.Text = "Fabricar productos";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += productos_Click;
             // 
             // label2
             // 
@@ -99,7 +99,7 @@
             button4.TabIndex = 5;
             button4.Text = "Cerrar Secion";
             button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            button4.Click += Cerrar_Click;
             // 
             // button5
             // 
@@ -109,7 +109,7 @@
             button5.TabIndex = 6;
             button5.Text = "Ver materiales";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            button5.Click += verMaterial_Click;
             // 
             // FormSupervisor
             // 

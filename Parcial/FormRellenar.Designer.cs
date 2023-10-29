@@ -53,7 +53,7 @@
             button1.TabIndex = 2;
             button1.Text = "Añadir stock";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += añadir_Click;
             // 
             // numericUpDown1
             // 
@@ -61,6 +61,7 @@
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(120, 23);
             numericUpDown1.TabIndex = 3;
+
             // 
             // numericUpDown2
             // 

@@ -28,7 +28,7 @@ namespace Parcial
             formularioInicio.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void masInfo_Click(object sender, EventArgs e)
         {
             MostrarOperario mostrarOperario = new MostrarOperario();
 
@@ -42,7 +42,7 @@ namespace Parcial
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void rellenar_Click(object sender, EventArgs e)
         {
             FormRellenar rellenar = new FormRellenar();
             Hide();
@@ -55,7 +55,7 @@ namespace Parcial
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void productos_Click(object sender, EventArgs e)
         {
             FormCrear formOperador = new FormCrear();
 
@@ -68,12 +68,12 @@ namespace Parcial
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Cerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void verMaterial_Click(object sender, EventArgs e)
         {
             Material mostrar = new Material();
             mostrar.Show();

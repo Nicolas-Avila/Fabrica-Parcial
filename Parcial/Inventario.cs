@@ -27,6 +27,10 @@ namespace Parcial
         private static List<MesaMadera> productosMMadera = new List<MesaMadera>();
         private static List<MesaMetal> productosMMetal = new List<MesaMetal>();
 
+
+        /// <summary>
+        ///  Descuenta el material del inventario.
+        /// </summary>
         public static void StockMateriales(string material1, string material2)
         {
             foreach (var componente in stock)
@@ -41,6 +45,7 @@ namespace Parcial
                 }
             }
         }
+
 
         public static bool VerificarStock(string material1, string material2)
         {

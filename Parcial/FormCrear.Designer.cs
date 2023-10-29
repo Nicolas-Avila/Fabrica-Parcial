@@ -87,6 +87,7 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "Mesa de metal";
             radioButton3.UseVisualStyleBackColor = true;
+
             // 
             // radioButton4
             // 
@@ -197,7 +198,6 @@
             Controls.Add(CrearSillas);
             Name = "FormCrear";
             Text = "Operario";
-            //FormClosing += FormOperadores_FormClosing;
             mesas.ResumeLayout(false);
             mesas.PerformLayout();
             sillas.ResumeLayout(false);

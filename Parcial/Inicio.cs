@@ -11,6 +11,7 @@ namespace Parcial
             InitializeComponent();
         }
 
+
         private void aceptar_Click_1(object sender, EventArgs e)
         {
 
@@ -23,7 +24,7 @@ namespace Parcial
             if (ingresanteOp.Ingreso(nombre, apellido, id))
             {
                 FormCrear formOperador = new FormCrear();
-               
+                MessageBox.Show(ingresanteOp.Info());
                 formOperador.Show();
                 
             }
@@ -33,6 +34,7 @@ namespace Parcial
             if (ingresanteSu.Ingreso(nombre, apellido, id))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this);
+                MessageBox.Show(ingresanteSu.Info());
                 this.Hide();
                 formSupervisor.Show();
             }
@@ -58,12 +60,14 @@ namespace Parcial
             Listas.IniciosSupervisor.Add(supervisor5);
         }
 
+        /// <summary>
+        /// Harcodea el inicio de secion.
+        /// </summary>
         private void btnOperario_Click(object sender, EventArgs e)
         {
             this.nombre.Text = "nico";
             this.apellido.Text = "avila";
             this.id.Value = 1;
-
 
         }
 

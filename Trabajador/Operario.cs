@@ -15,7 +15,10 @@ namespace Trabajador
         {
                         
         }
-        
+
+        /// <summary>
+        /// Verifica el ingreso de un operario con nombre, apellido e ID del operario.
+        /// </summary>
         public override bool Ingreso (string nombre, string apellido, int id) {
 
             foreach (Operario operario in Listas.IniciosOperario)
