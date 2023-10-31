@@ -1,6 +1,6 @@
 ﻿namespace Parcial
 {
-    partial class MostrarOperario
+    partial class Informacion
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,6 @@
             label1.Size = new Size(193, 30);
             label1.TabIndex = 0;
             label1.Text = "Operadores en Linea";
-            
             // 
             // cuadroOperario
             // 
@@ -228,7 +227,7 @@
             Controls.Add(cuadroOperario);
             Controls.Add(label1);
             Name = "MostrarOperario";
-            Text = "Lista operarios";
+            Text = "Informacion";
             ((System.ComponentModel.ISupportInitialize)cuadroOperario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

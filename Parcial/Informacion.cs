@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Parcial
 {
-    public partial class MostrarOperario : Form
+    public partial class Informacion : Form
     {
-        public MostrarOperario()
+        public Informacion()
         {
             InitializeComponent();
             cuadroOperario.DataSource = Listas.IniciosOperario;

@@ -30,7 +30,7 @@ namespace Parcial
 
         private void masInfo_Click(object sender, EventArgs e)
         {
-            MostrarOperario mostrarOperario = new MostrarOperario();
+            Informacion mostrarOperario = new Informacion();
 
             Hide();
             DialogResult result = mostrarOperario.ShowDialog();

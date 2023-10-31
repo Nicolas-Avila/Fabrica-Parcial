@@ -31,15 +31,13 @@ namespace Parcial
         {
             string mesa = this.mesas.Text;
 
-            foreach (Control item in mesas.Controls)
+            foreach (Control item in mesas.Controls)//Controls es el groupbox
             {
                 if (item is RadioButton && ((RadioButton)item).Checked)
                 {
                     mesa = ((RadioButton)item).Text;
                 }
             }
-
-
             MesaMetal.CrearMesaMetal(mesa);
             MesaMadera.CrearMesaMadera(mesa);
         }
