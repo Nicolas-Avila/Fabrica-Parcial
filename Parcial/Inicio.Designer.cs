@@ -142,7 +142,6 @@
             btnSupervisor.TabIndex = 10;
             btnSupervisor.Text = "Secion supervisor";
             btnSupervisor.UseVisualStyleBackColor = true;
-            btnSupervisor.Click += btnSupervisor_Click;
             // 
             // btnOperario
             // 
@@ -152,7 +151,6 @@
             btnOperario.TabIndex = 11;
             btnOperario.Text = "Secion operario";
             btnOperario.UseVisualStyleBackColor = true;
-            btnOperario.Click += btnOperario_Click;
             // 
             // Inicio
             // 
@@ -166,7 +164,6 @@
             Controls.Add(label2);
             Name = "Inicio";
             Text = "Tu fabrica";
-            Load += Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)id).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

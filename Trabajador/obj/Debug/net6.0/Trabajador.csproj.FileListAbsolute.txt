@@ -20,3 +20,4 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Trabajad
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\refint\Trabajador.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Trabajador.pdb
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\ref\Trabajador.dll
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Trabajador.csproj.AssemblyReference.cache

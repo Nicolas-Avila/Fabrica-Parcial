@@ -19,64 +19,28 @@ namespace Parcial
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
 
-            Operario ingresanteOp = new Operario(nombre, apellido,id);
-            
-            if (ingresanteOp.Ingreso(nombre, apellido, id))
+
+
+            if (Operario.Ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
             {
                 FormCrear formOperador = new FormCrear();
-                MessageBox.Show(ingresanteOp.Info());
+                //MessageBox.Show(ingresanteOp.Info());
                 formOperador.Show();
-                
+
             }
 
-            Supervisor ingresanteSu = new Supervisor(nombre, apellido, id);
 
-            if (ingresanteSu.Ingreso(nombre, apellido, id))
+            if (Supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this);
-                MessageBox.Show(ingresanteSu.Info());
+                //MessageBox.Show(Supervisor.Info());
                 this.Hide();
                 formSupervisor.Show();
             }
 
         }
 
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-            
-            Operario operario1 = new Operario("nico", "avila", 1);
-            Operario operario2 = new Operario("santiago", "varista", 2);
 
-            Supervisor supervisor1 = new Supervisor("martin", "alcaraz", 5);
-            Supervisor supervisor2 = new Supervisor("luciano", "somas", 7);
-            Supervisor supervisor5 = new Supervisor("hola", "hey", 9);
 
-            Listas.IniciosOperario.Add(operario1);
-            Listas.IniciosOperario.Add(operario2);
-            
-
-            Listas.IniciosSupervisor.Add(supervisor1);
-            Listas.IniciosSupervisor.Add(supervisor2);
-            Listas.IniciosSupervisor.Add(supervisor5);
-        }
-
-        /// <summary>
-        /// Harcodea el inicio de secion.
-        /// </summary>
-        private void btnOperario_Click(object sender, EventArgs e)
-        {
-            this.nombre.Text = "nico";
-            this.apellido.Text = "avila";
-            this.id.Value = 1;
-
-        }
-
-        private void btnSupervisor_Click(object sender, EventArgs e)
-        {
-            this.nombre.Text = "martin";
-            this.apellido.Text = "alcaraz";
-            this.id.Value = 5;
-
-        }
     }
 }

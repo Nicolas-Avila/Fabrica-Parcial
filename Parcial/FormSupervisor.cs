@@ -8,6 +8,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajador;
 
 namespace Parcial
 {
@@ -77,6 +78,22 @@ namespace Parcial
         {
             Material mostrar = new Material();
             mostrar.Show();
+        }
+
+        private void CrearOperario_Click(object sender, EventArgs e)
+        {
+            string nombre = this.nombre.Text;
+            string apellido = this.apellido.Text;
+
+            CrudDAO.GuardarOperario(nombre, apellido);
+        }
+
+        private void CrearSupervisor_Click_1(object sender, EventArgs e)
+        {
+            string nombre = this.nombre.Text;
+            string apellido = this.apellido.Text;
+
+            CrudDAO.GuardarSupervisor(nombre, apellido);
         }
     }
 }

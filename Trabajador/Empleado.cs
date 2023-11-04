@@ -19,8 +19,8 @@ namespace Trabajador
         public string Apellido { get => apellido; set => apellido = value; }
         public int Id { get => id; set => id = value; }
 
-        public abstract bool Ingreso(string nombre, string apellido, int id);
-        public abstract string Info();
+        
+       // public abstract string Info();
 
     }
 }

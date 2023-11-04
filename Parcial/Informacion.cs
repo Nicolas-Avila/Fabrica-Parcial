@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajador;
 
 namespace Parcial
 {
@@ -15,13 +16,14 @@ namespace Parcial
         public Informacion()
         {
             InitializeComponent();
-            cuadroOperario.DataSource = Listas.IniciosOperario;
+            cuadroOperario.DataSource = CrudDAO.LeerOperarios();
             dataGridView1.DataSource = Inventario.ProductosMMadera;
             dataGridView2.DataSource = Inventario.ProductosMMetal;
             dataGridView3.DataSource = Inventario.ProductosSMadera;
             dataGridView4.DataSource = Inventario.ProductoSMetal;
 
         }
+
 
     }
 }

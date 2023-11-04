@@ -19,9 +19,9 @@ namespace Trabajador
         /// <summary>
         /// Verifica el ingreso de un operario con nombre, apellido e ID del operario.
         /// </summary>
-        public override bool Ingreso (string nombre, string apellido, int id) {
+        public static bool Ingreso (string nombre, string apellido, int id,List<Operario>ListOperario) {
 
-            foreach (Operario operario in Listas.IniciosOperario)
+            foreach (Operario operario in ListOperario)
             {
 
                 if (operario.Nombre == nombre && operario.Apellido == apellido && operario.Id == id)
@@ -33,15 +33,15 @@ namespace Trabajador
         }
 
 
-        public override string Info()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Bienvenido Operador");
-            sb.AppendLine($"Nombre: {Nombre}");
-            sb.AppendLine($"Apellido: {Apellido}");
-            sb.AppendLine($"Id: {Id}");
-            return sb.ToString();
-        }
+        //public override string Info()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine("Bienvenido Operador");
+        //    sb.AppendLine($"Nombre: {Nombre}");
+        //    sb.AppendLine($"Apellido: {Apellido}");
+        //    sb.AppendLine($"Id: {Id}");
+        //    return sb.ToString();
+        //}
 
     }
 }

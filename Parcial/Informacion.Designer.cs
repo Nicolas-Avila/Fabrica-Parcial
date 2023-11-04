@@ -93,6 +93,7 @@
             cuadroOperario.RowTemplate.Height = 25;
             cuadroOperario.Size = new Size(326, 95);
             cuadroOperario.TabIndex = 1;
+         
             // 
             // dataGridView1
             // 

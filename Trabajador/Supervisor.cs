@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Trabajador
 {
-    public class Supervisor : Empleado
+    public  class Supervisor : Empleado
     {
         public Supervisor(string nombre, string apellido, int id) : base(nombre, apellido, id)
         {
@@ -17,10 +17,10 @@ namespace Trabajador
         /// <summary>
         /// Verifica el ingreso de un operario con nombre, apellido e ID del supervisor.
         /// </summary>
-        public override bool Ingreso(string nombre, string apellido, int id)
+        public static bool Ingreso(string nombre, string apellido, int id,List<Supervisor>listSupervisor)
         {
 
-            foreach (Supervisor supervisor in Listas.IniciosSupervisor)
+            foreach (Supervisor supervisor in listSupervisor)
             {
                 if (supervisor.Nombre == nombre && supervisor.Apellido == apellido && supervisor.Id == id)
                 {
@@ -32,15 +32,15 @@ namespace Trabajador
             return false;
         }
 
-        public override string Info()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Bienvenido Supervisor");
-            sb.AppendLine($"Nombre: {Nombre}");
-            sb.AppendLine($"Apellido: {Apellido}");
-            sb.AppendLine($"ID: {Id}");
-            return sb.ToString();
-        }
+        //public override string Info()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine("Bienvenido Supervisor");
+        //    sb.AppendLine($"Nombre: {Nombre}");
+        //    sb.AppendLine($"Apellido: {Apellido}");
+        //    sb.AppendLine($"ID: {Id}");
+        //    return sb.ToString();
+        //}
 
 
     }
