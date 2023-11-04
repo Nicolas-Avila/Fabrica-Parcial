@@ -28,6 +28,8 @@ namespace Parcial
         private static List<MesaMetal> productosMMetal = new List<MesaMetal>();
 
 
+
+
         /// <summary>
         ///  Descuenta el material del inventario.
         /// </summary>
@@ -68,6 +70,10 @@ namespace Parcial
             }
             return false;
         }
+
+
+
+
 
     }
 }

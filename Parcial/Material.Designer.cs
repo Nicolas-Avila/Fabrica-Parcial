@@ -31,6 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             label1 = new Label();
+            listaMaterial = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,6 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(278, 206);
             dataGridView1.TabIndex = 0;
-
             // 
             // label1
             // 
@@ -66,12 +66,23 @@
             label1.TabIndex = 1;
             label1.Text = "Stock disponible";
             // 
+            // listaMaterial
+            // 
+            listaMaterial.Location = new Point(300, 356);
+            listaMaterial.Name = "listaMaterial";
+            listaMaterial.Size = new Size(181, 55);
+            listaMaterial.TabIndex = 2;
+            listaMaterial.Text = "Crear Listas";
+            listaMaterial.UseVisualStyleBackColor = true;
+            listaMaterial.Click += listaMaterial_Click;
+            // 
             // Material
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
+            Controls.Add(listaMaterial);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "Material";
@@ -85,5 +96,6 @@
 
         private DataGridView dataGridView1;
         private Label label1;
+        private Button listaMaterial;
     }
 }

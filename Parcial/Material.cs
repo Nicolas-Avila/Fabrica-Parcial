@@ -19,5 +19,17 @@ namespace Parcial
 
         }
 
+        private void listaMaterial_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in Inventario.Stock)
+            {
+                sb.AppendLine($"{item.Key}: {item.Value}");
+            }
+            string datos = sb.ToString();
+
+            Archivos.crearArchivo("Stock", "xml", datos);
+            MessageBox.Show("Lista Creada");
+        }
     }
 }

@@ -59,7 +59,7 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(299, 20);
+            label1.Location = new Point(293, 9);
             label1.Name = "label1";
             label1.Size = new Size(193, 30);
             label1.TabIndex = 0;
@@ -88,7 +88,7 @@
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             cuadroOperario.DefaultCellStyle = dataGridViewCellStyle3;
-            cuadroOperario.Location = new Point(225, 67);
+            cuadroOperario.Location = new Point(227, 67);
             cuadroOperario.Name = "cuadroOperario";
             cuadroOperario.RowTemplate.Height = 25;
             cuadroOperario.Size = new Size(326, 95);
@@ -142,7 +142,7 @@
             dataGridViewCellStyle6.SelectionForeColor = SystemColors.Desktop;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dataGridView3.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridView3.Location = new Point(81, 395);
+            dataGridView3.Location = new Point(81, 353);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowTemplate.Height = 25;
             dataGridView3.Size = new Size(245, 94);
@@ -160,7 +160,7 @@
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.Desktop;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dataGridView4.DefaultCellStyle = dataGridViewCellStyle7;
-            dataGridView4.Location = new Point(456, 395);
+            dataGridView4.Location = new Point(456, 354);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowTemplate.Height = 25;
             dataGridView4.Size = new Size(245, 93);
@@ -193,7 +193,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(123, 335);
+            label5.Location = new Point(123, 313);
             label5.Name = "label5";
             label5.Size = new Size(163, 37);
             label5.TabIndex = 9;
@@ -204,13 +204,13 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(511, 335);
+            label6.Location = new Point(511, 313);
             label6.Name = "label6";
             label6.Size = new Size(140, 37);
             label6.TabIndex = 10;
             label6.Text = "Silla metal";
             // 
-            // MostrarOperario
+            // Informacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -226,7 +226,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(cuadroOperario);
             Controls.Add(label1);
-            Name = "MostrarOperario";
+            Name = "Informacion";
             Text = "Informacion";
             ((System.ComponentModel.ISupportInitialize)cuadroOperario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -249,5 +249,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button ListaProductos;
     }
 }
