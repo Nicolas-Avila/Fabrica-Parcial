@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Parcial/1.0.0": {
         "dependencies": {
-          "Trabajador": "1.0.0"
+          "Fabrica": "1.0.0"
         },
         "runtime": {
           "Parcial.dll": {}
@@ -89,12 +89,12 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "Trabajador/1.0.0": {
+      "Fabrica/1.0.0": {
         "dependencies": {
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
-          "Trabajador.dll": {}
+          "Fabrica.dll": {}
         }
       }
     }
@@ -168,7 +168,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "Trabajador/1.0.0": {
+    "Fabrica/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

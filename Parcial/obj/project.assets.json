@@ -147,17 +147,17 @@
           }
         }
       },
-      "Trabajador/1.0.0": {
+      "Fabrica/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.5"
         },
         "compile": {
-          "bin/placeholder/Trabajador.dll": {}
+          "bin/placeholder/Fabrica.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Trabajador.dll": {}
+          "bin/placeholder/Fabrica.dll": {}
         }
       }
     }
@@ -476,15 +476,15 @@
         "version.txt"
       ]
     },
-    "Trabajador/1.0.0": {
+    "Fabrica/1.0.0": {
       "type": "project",
-      "path": "../Trabajador/Trabajador.csproj",
-      "msbuildProject": "../Trabajador/Trabajador.csproj"
+      "path": "../Trabajador/Fabrica.csproj",
+      "msbuildProject": "../Trabajador/Fabrica.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Trabajador >= 1.0.0"
+      "Fabrica >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -514,8 +514,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj"
+            "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj"
             }
           }
         }

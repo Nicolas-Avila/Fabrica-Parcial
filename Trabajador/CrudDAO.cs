@@ -27,13 +27,13 @@ namespace Trabajador
             command.Connection = connection;
         }
 
-        public static void GuardarOperario(string nombre, string apellido)
+        public static void Guardar(string nombre, string apellido,string trabajo)
         {
             try
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = $"INSERT INTO OPERADOR (NOMBRE,APELLIDO) VALUES (@NOMBRE,@APELLIDO)";
+                command.CommandText = $"INSERT INTO {trabajo} (NOMBRE,APELLIDO) VALUES (@NOMBRE,@APELLIDO)";
                 command.Parameters.AddWithValue("@NOMBRE", nombre);
                 command.Parameters.AddWithValue("@APELLIDO", apellido);
                 int rows = command.ExecuteNonQuery();
@@ -45,47 +45,28 @@ namespace Trabajador
             finally { connection.Close(); }
         }
 
-        public static void GuardarSupervisor(string nombre, string apellido)
+        public static void Actualizar(string nombre,string apellido, int id,string trabajo)
         {
             try
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = $"INSERT INTO SUPERVISOR (NOMBRE,APELLIDO) VALUES (@NOMBRE,@APELLIDO)";
+                command.CommandText = $"UPDATE {trabajo} SET NOMBRE = @NOMBRE, APELLIDO = @APELLIDO WHERE ID = @ID";
                 command.Parameters.AddWithValue("@NOMBRE", nombre);
                 command.Parameters.AddWithValue("@APELLIDO", apellido);
+                command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
             catch (Exception)
             {
+
                 throw;
             }
-            finally { connection.Close(); }
+            finally
+            {
+                connection.Close();
+            }
         }
-
-        //public static void Modificar(string nuevoNombre, int id)
-        //{
-        //    try
-        //    {
-        //        command.Parameters.Clear();
-        //        connection.Open();
-        //        command.CommandText = $"UPDATE Personas SET Nombre = @Nombre WHERE ID = @ID";
-        //        command.Parameters.AddWithValue("@Nombre", nuevoNombre);
-        //        command.Parameters.AddWithValue("@ID", id);
-        //        int rows = command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //}
-
-
 
         public static List<Operario> LeerOperarios()
         {
@@ -142,13 +123,13 @@ namespace Trabajador
             }
         }
 
-        public static void Eliminar(int id)
+        public static void Eliminar(int id , string trabajo)
         {
             try
             {
                 command.Parameters.Clear();
                 connection.Open();
-                command.CommandText = $"DELETE FROM PERSONA WHERE ID = {id}";
+                command.CommandText = $"DELETE FROM {trabajo} WHERE ID = {id}";
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
@@ -162,6 +143,8 @@ namespace Trabajador
                 connection.Close();
             }
         }
+
+
 
     }
 

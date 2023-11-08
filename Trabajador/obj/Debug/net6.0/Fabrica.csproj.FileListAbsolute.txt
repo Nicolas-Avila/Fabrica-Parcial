@@ -1,0 +1,12 @@
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\bin\Debug\net6.0\Fabrica.deps.json
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\bin\Debug\net6.0\Fabrica.dll
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\bin\Debug\net6.0\Fabrica.pdb
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.csproj.AssemblyReference.cache
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.AssemblyInfoInputs.cache
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.AssemblyInfo.cs
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.dll
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\refint\Fabrica.dll
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\Fabrica.pdb
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Trabajador\obj\Debug\net6.0\ref\Fabrica.dll

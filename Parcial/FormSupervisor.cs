@@ -82,18 +82,14 @@ namespace Parcial
 
         private void CrearOperario_Click(object sender, EventArgs e)
         {
-            string nombre = this.nombre.Text;
-            string apellido = this.apellido.Text;
-
-            CrudDAO.GuardarOperario(nombre, apellido);
+            FormNewOperario formNewOperario = new FormNewOperario();
+            formNewOperario.Show();
         }
 
-        private void CrearSupervisor_Click_1(object sender, EventArgs e)
+        private void CrearSupervisor_Click(object sender, EventArgs e)
         {
-            string nombre = this.nombre.Text;
-            string apellido = this.apellido.Text;
-
-            CrudDAO.GuardarSupervisor(nombre, apellido);
+            FormNewSupervisor formNewSupervisor = new FormNewSupervisor();
+            formNewSupervisor.Show();
         }
     }
 }

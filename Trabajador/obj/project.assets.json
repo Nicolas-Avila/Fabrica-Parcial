@@ -475,9 +475,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj",
-      "projectName": "Trabajador",
-      "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Trabajador.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj",
+      "projectName": "Fabrica",
+      "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\obj\\",
       "projectStyle": "PackageReference",
