@@ -56,4 +56,4 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Fab
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Fabrica.pdb
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewOperario.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewSupervisor.resources
-C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormActualizarOperador.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormActualizar.resources

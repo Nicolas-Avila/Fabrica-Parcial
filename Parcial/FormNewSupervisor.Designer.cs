@@ -138,6 +138,7 @@
             Controls.Add(Borrar);
             Controls.Add(cuadroSupervisor);
             Name = "FormNewSupervisor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormNewSupervisor";
             ((System.ComponentModel.ISupportInitialize)cuadroSupervisor).EndInit();
             ResumeLayout(false);

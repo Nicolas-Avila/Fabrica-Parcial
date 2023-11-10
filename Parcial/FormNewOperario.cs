@@ -14,12 +14,12 @@ namespace Parcial
     public partial class FormNewOperario : Form
     {
 
-        
+
         public FormNewOperario()
         {
             InitializeComponent();
             cuadroOperario.DataSource = CrudDAO.LeerOperarios();
-            
+
         }
 
         private void CrearOperario_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Parcial
             if (cuadroOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)cuadroOperario.CurrentRow.DataBoundItem;
-                CrudDAO.Eliminar(operario.Id,"OPERADOR");
+                CrudDAO.Eliminar(operario.Id, "OPERADOR");
             }
         }
     }

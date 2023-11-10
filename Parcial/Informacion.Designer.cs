@@ -190,6 +190,7 @@
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Name = "Informacion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Informacion";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

@@ -31,5 +31,7 @@ namespace Parcial
             Archivos.crearArchivo("Stock", "xml", datos);
             MessageBox.Show("Lista Creada");
         }
+
     }
 }
+

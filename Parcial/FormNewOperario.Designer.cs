@@ -114,6 +114,7 @@
             Controls.Add(Borrar);
             Controls.Add(cuadroOperario);
             Name = "FormNewOperario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormNewOperario";
             ((System.ComponentModel.ISupportInitialize)cuadroOperario).EndInit();
             ResumeLayout(false);

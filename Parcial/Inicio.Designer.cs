@@ -163,6 +163,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Name = "Inicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tu fabrica";
             ((System.ComponentModel.ISupportInitialize)id).EndInit();
             groupBox1.ResumeLayout(false);

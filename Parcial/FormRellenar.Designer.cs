@@ -61,7 +61,6 @@
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(120, 23);
             numericUpDown1.TabIndex = 3;
-
             // 
             // numericUpDown2
             // 
@@ -157,6 +156,7 @@
             Controls.Add(numericUpDown1);
             Controls.Add(button1);
             Name = "FormRellenar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "**";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();

@@ -149,6 +149,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "FormSupervisor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Supervisor";
             FormClosing += FormSupervisor_FormClosing;
             ResumeLayout(false);

@@ -43,7 +43,7 @@ namespace Parcial
             if (cuadroSupervisor.SelectedRows.Count > 0)
             {
                 Supervisor supervisor = (Supervisor)cuadroSupervisor.CurrentRow.DataBoundItem;
-                CrudDAO.Eliminar(supervisor.Id,"SUPERVISOR");
+                CrudDAO.Eliminar(supervisor.Id, "SUPERVISOR");
             }
         }
     }
