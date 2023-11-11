@@ -45,7 +45,6 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Par
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Material.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormCrear.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormRellenar.resources
-C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Informacion.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
@@ -57,3 +56,4 @@ C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\bin\Debug\net6.0-windows\Fab
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewOperario.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewSupervisor.resources
 C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormActualizar.resources
+C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Productos.resources

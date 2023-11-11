@@ -12,24 +12,27 @@ namespace Parcial
 {
     public partial class Material : Form
     {
+        
         public Material()
         {
             InitializeComponent();
+            
             dataGridView1.DataSource = Inventario.Stock.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
-
+            
         }
+    
 
         private void listaMaterial_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in Inventario.Stock)
-            {
-                sb.AppendLine($"{item.Key}: {item.Value}");
-            }
-            string datos = sb.ToString();
-
-            Archivos.crearArchivo("Stock", "xml", datos);
+            List<ItemStock> listaStock = Inventario.Stock.Select(item => new ItemStock { Componente = item.Key, Cantidad = item.Value }).ToList();
+            Archivos<List<ItemStock>>.crearXml(listaStock);
             MessageBox.Show("Lista Creada");
+
+        }
+        public class ItemStock
+        {
+            public string Componente { get; set; }
+            public int Cantidad { get; set; }
         }
 
     }

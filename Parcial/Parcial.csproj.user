@@ -25,7 +25,7 @@
     <Compile Update="Material.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Informacion.cs">
+    <Compile Update="Productos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormSupervisor.cs">
