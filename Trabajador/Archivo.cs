@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 using System.Xml.Serialization;
 
 namespace Parcial
@@ -44,8 +45,31 @@ namespace Parcial
                 }
             }
         }
-    
-        
-    
+
+        public static void EscribirJson<T>(T objeto)
+        {
+            string archivo = $"{path}/hola.json";
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            JsonSerializerOptions options = new JsonSerializerOptions();
+            options.WriteIndented = true;
+
+            string jsonString = JsonSerializer.Serialize(objeto, options);
+
+            File.WriteAllText(archivo, jsonString);
+        }
+
+        public static T Leer_JSON<T>()
+        {
+            string archivo = $"{path}/hola.json";
+            string jsonString = File.ReadAllText(archivo);
+            T objeto = JsonSerializer.Deserialize<T>(jsonString);
+
+            return objeto;
+        }
+
     }
 }

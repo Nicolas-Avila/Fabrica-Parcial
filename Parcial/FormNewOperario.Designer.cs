@@ -116,6 +116,7 @@
             Name = "FormNewOperario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormNewOperario";
+            Load += FormNewOperario_Load;
             ((System.ComponentModel.ISupportInitialize)cuadroOperario).EndInit();
             ResumeLayout(false);
             PerformLayout();

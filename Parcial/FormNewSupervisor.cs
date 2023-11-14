@@ -16,8 +16,14 @@ namespace Parcial
         public FormNewSupervisor()
         {
             InitializeComponent();
+            
+        }
+        private void carga()
+        {
+            cuadroSupervisor.DataSource = null;
             cuadroSupervisor.DataSource = CrudDAO.LeerSupervisor();
-
+            cuadroSupervisor.Refresh();
+            cuadroSupervisor.Update();
         }
 
         private void CrearOperario_Click(object sender, EventArgs e)
@@ -26,6 +32,7 @@ namespace Parcial
             string apellido = this.apellido.Text;
 
             CrudDAO.Guardar(nombre, apellido, "SUPERVISOR");
+            carga();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -34,7 +41,8 @@ namespace Parcial
             {
                 Supervisor supervisor = (Supervisor)cuadroSupervisor.CurrentRow.DataBoundItem;
                 FormActualizar formActualizarOperador = new FormActualizar(supervisor.Id, "supervisor");
-                formActualizarOperador.Show();
+                formActualizarOperador.ShowDialog();
+                carga();
             }
         }
 
@@ -44,7 +52,13 @@ namespace Parcial
             {
                 Supervisor supervisor = (Supervisor)cuadroSupervisor.CurrentRow.DataBoundItem;
                 CrudDAO.Eliminar(supervisor.Id, "SUPERVISOR");
+                carga();
             }
+        }
+
+        private void FormNewSupervisor_Load(object sender, EventArgs e)
+        {
+            carga();
         }
     }
 }

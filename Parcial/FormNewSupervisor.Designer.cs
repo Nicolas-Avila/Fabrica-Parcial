@@ -140,6 +140,7 @@
             Name = "FormNewSupervisor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormNewSupervisor";
+            Load += FormNewSupervisor_Load;
             ((System.ComponentModel.ISupportInitialize)cuadroSupervisor).EndInit();
             ResumeLayout(false);
             PerformLayout();

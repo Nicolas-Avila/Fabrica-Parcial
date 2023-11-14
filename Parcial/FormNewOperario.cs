@@ -18,16 +18,23 @@ namespace Parcial
         public FormNewOperario()
         {
             InitializeComponent();
-            cuadroOperario.DataSource = CrudDAO.LeerOperarios();
+            
+        }
 
+        private void carga()
+        {
+            cuadroOperario.DataSource = null;
+            cuadroOperario.DataSource = CrudDAO.LeerOperarios();
+            cuadroOperario.Refresh();
+            cuadroOperario.Update();
         }
 
         private void CrearOperario_Click(object sender, EventArgs e)
         {
             string nombre = this.nombre.Text;
             string apellido = this.apellido.Text;
-
             CrudDAO.Guardar(nombre, apellido, "OPERADOR");
+            carga();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -36,7 +43,8 @@ namespace Parcial
             {
                 Operario operario = (Operario)cuadroOperario.CurrentRow.DataBoundItem;
                 FormActualizar formActualizarOperador = new FormActualizar(operario.Id, "operador");
-                formActualizarOperador.Show();
+                formActualizarOperador.ShowDialog();
+                carga();
             }
 
         }
@@ -46,7 +54,13 @@ namespace Parcial
             {
                 Operario operario = (Operario)cuadroOperario.CurrentRow.DataBoundItem;
                 CrudDAO.Eliminar(operario.Id, "OPERADOR");
+                carga();
             }
+        }
+
+        private void FormNewOperario_Load(object sender, EventArgs e)
+        {
+            carga();
         }
     }
 }

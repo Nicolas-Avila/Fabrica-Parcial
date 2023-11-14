@@ -39,6 +39,7 @@
             groupBox1 = new GroupBox();
             btnSupervisor = new Button();
             btnOperario = new Button();
+            noche = new Button();
             ((System.ComponentModel.ISupportInitialize)id).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -152,12 +153,23 @@
             btnOperario.Text = "Secion operario";
             btnOperario.UseVisualStyleBackColor = true;
             // 
+            // noche
+            // 
+            noche.Location = new Point(580, 143);
+            noche.Name = "noche";
+            noche.Size = new Size(105, 97);
+            noche.TabIndex = 12;
+            noche.Text = "button1";
+            noche.UseVisualStyleBackColor = true;
+            noche.Click += noche_Click;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(802, 478);
+            Controls.Add(noche);
             Controls.Add(btnOperario);
             Controls.Add(btnSupervisor);
             Controls.Add(groupBox1);
@@ -185,5 +197,6 @@
         private GroupBox groupBox1;
         private Button btnSupervisor;
         private Button btnOperario;
+        private Button noche;
     }
 }
