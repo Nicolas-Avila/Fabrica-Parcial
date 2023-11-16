@@ -1,35 +1,50 @@
-﻿using System;
+﻿using Fabrica;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Text.Json;
 using System.Xml.Serialization;
 
 namespace Parcial
 {
-    public class Archivos<T>
+    public class Archivos<T>:Iarchios<T>
     {
-        static string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info";
+         string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info";
 
-        public static void crearArchivo(string nombreArchivo, string extension, string datos)
+        public bool CrearTxt(string dato)
         {
-            if (!Directory.Exists(path))
+            string archivo = $"{path}/Errores.txt";
+            try
             {
-                Directory.CreateDirectory(path);
-            }
-
-            if (Directory.Exists(path))
-            {
-                string fechaHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                string archivo = $"{path}/{nombreArchivo}.{extension}";
-                using (StreamWriter sw = new StreamWriter(archivo))
+                using (StreamWriter sw = new StreamWriter(archivo, true))
                 {
-                    sw.WriteLine(fechaHora);
-                    sw.WriteLine(datos);
+                    sw.WriteLine(dato);
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return false;
             }
         }
+              
+        public static void error(DateTime fechaHora,string clase, string metodo, string mensaje)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(fechaHora.ToString());
+            sb.AppendLine($"Clase:{clase}");
+            sb.AppendLine($"Metodo:{metodo}");
+            sb.AppendLine($"Error:{mensaje}");
 
-        public static void crearXml(T objeto)
+            Archivos<string> crearTxt = new Archivos<string>();
+            crearTxt.CrearTxt(sb.ToString());
+            
+        }
+
+        public void crearXml(T objeto)
         {
             if (!Directory.Exists(path))
             {
@@ -46,9 +61,9 @@ namespace Parcial
             }
         }
 
-        public static void EscribirJson<T>(T objeto)
+        public void EscribirJson<T>(T objeto)
         {
-            string archivo = $"{path}/hola.json";
+            string archivo = $"{path}/Configuracion.json";
 
             if (!Directory.Exists(path))
             {
@@ -62,9 +77,9 @@ namespace Parcial
             File.WriteAllText(archivo, jsonString);
         }
 
-        public static T Leer_JSON<T>()
+        public  T Leer_JSON<T>()
         {
-            string archivo = $"{path}/hola.json";
+            string archivo = $"{path}/Configuracion.json";
             string jsonString = File.ReadAllText(archivo);
             T objeto = JsonSerializer.Deserialize<T>(jsonString);
 

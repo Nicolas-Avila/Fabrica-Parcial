@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajador;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
@@ -16,11 +17,13 @@ namespace Parcial
     {
 
         private Inicio formularioInicio;
-
-        public FormSupervisor(Inicio formularioInicio)
+        protected CambiarColor cambiarColor;
+        public FormSupervisor(Inicio formularioInicio, CambiarColor cambiarColor)
         {
             InitializeComponent();
             this.formularioInicio = formularioInicio;
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
 
         }
 
@@ -31,7 +34,7 @@ namespace Parcial
 
         private void masInfo_Click(object sender, EventArgs e)
         {
-            Productos mostrarOperario = new Productos();
+            Productos mostrarOperario = new Productos(cambiarColor);
 
             Hide();
             DialogResult result = mostrarOperario.ShowDialog();
@@ -45,7 +48,7 @@ namespace Parcial
 
         private void rellenar_Click(object sender, EventArgs e)
         {
-            FormRellenar rellenar = new FormRellenar();
+            FormRellenar rellenar = new FormRellenar(cambiarColor);
             Hide();
             DialogResult result = rellenar.ShowDialog();
 
@@ -58,7 +61,7 @@ namespace Parcial
 
         private void productos_Click(object sender, EventArgs e)
         {
-            FormCrear formOperador = new FormCrear();
+            FormCrear formOperador = new FormCrear(cambiarColor);
 
             Hide();
             DialogResult result = formOperador.ShowDialog();
@@ -76,19 +79,19 @@ namespace Parcial
 
         private void verMaterial_Click(object sender, EventArgs e)
         {
-            Material mostrar = new Material();
+            Material mostrar = new Material(cambiarColor);
             mostrar.Show();
         }
 
         private void CrearOperario_Click(object sender, EventArgs e)
         {
-            FormNewOperario formNewOperario = new FormNewOperario();
+            FormNewOperario formNewOperario = new FormNewOperario(cambiarColor);
             formNewOperario.Show();
         }
 
         private void CrearSupervisor_Click(object sender, EventArgs e)
         {
-            FormNewSupervisor formNewSupervisor = new FormNewSupervisor();
+            FormNewSupervisor formNewSupervisor = new FormNewSupervisor(cambiarColor);
             formNewSupervisor.Show();
         }
     }

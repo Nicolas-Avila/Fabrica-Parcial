@@ -14,8 +14,8 @@ namespace Parcial
 
             public Config()
             {
-                ColorOscuro = "#A5A3A2";
-                ColorClaro = "#0FB0CA";
+                ColorOscuro = "#656869";
+                ColorClaro = "#58D8EC";
             }
 
             public string ColorOscuro { get => colorOscuro; set => colorOscuro = value; }

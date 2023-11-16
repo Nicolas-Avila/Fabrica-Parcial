@@ -33,15 +33,5 @@ namespace Trabajador
         }
 
 
-        //public override string Info()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    sb.AppendLine("Bienvenido Operador");
-        //    sb.AppendLine($"Nombre: {Nombre}");
-        //    sb.AppendLine($"Apellido: {Apellido}");
-        //    sb.AppendLine($"Id: {Id}");
-        //    return sb.ToString();
-        //}
-
     }
 }

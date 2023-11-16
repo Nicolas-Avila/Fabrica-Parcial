@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajador;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
@@ -15,11 +16,14 @@ namespace Parcial
     {
         private int id;
         private string trabajador;
-        public FormActualizar(int id, string trabajador)
+        protected CambiarColor cambiarColor;
+        public FormActualizar(int id, string trabajador, CambiarColor cambiarColor)
         {
             InitializeComponent();
             this.id = id;
             this.trabajador = trabajador;
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
         }
 
         private void actualizar_Click(object sender, EventArgs e)

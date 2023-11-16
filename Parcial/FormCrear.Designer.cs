@@ -31,8 +31,8 @@
             CrearSillas = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            mesaMetal = new RadioButton();
+            MesaMadera = new RadioButton();
             mesas = new GroupBox();
             sillas = new GroupBox();
             CrearMesa = new Button();
@@ -76,41 +76,40 @@
             radioButton2.Text = "Silla de madera";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // mesaMetal
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Checked = true;
-            radioButton3.Location = new Point(37, 43);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(146, 29);
-            radioButton3.TabIndex = 7;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Mesa de metal";
-            radioButton3.UseVisualStyleBackColor = true;
+            mesaMetal.AutoSize = true;
+            mesaMetal.Checked = true;
+            mesaMetal.Location = new Point(37, 43);
+            mesaMetal.Name = "mesaMetal";
+            mesaMetal.Size = new Size(146, 29);
+            mesaMetal.TabIndex = 7;
+            mesaMetal.TabStop = true;
+            mesaMetal.Text = "Mesa de metal";
+            mesaMetal.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // MesaMadera
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(37, 90);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(162, 29);
-            radioButton4.TabIndex = 8;
-            radioButton4.Text = "Mesa de madera";
-            radioButton4.UseVisualStyleBackColor = true;
+            MesaMadera.AutoSize = true;
+            MesaMadera.Location = new Point(37, 90);
+            MesaMadera.Name = "MesaMadera";
+            MesaMadera.Size = new Size(162, 29);
+            MesaMadera.TabIndex = 8;
+            MesaMadera.Text = "Mesa de madera";
+            MesaMadera.UseVisualStyleBackColor = true;
             // 
             // mesas
             // 
             mesas.BackColor = SystemColors.ControlDark;
-            mesas.Controls.Add(radioButton3);
-            mesas.Controls.Add(radioButton4);
-            mesas.FlatStyle = FlatStyle.Flat;
+            mesas.Controls.Add(mesaMetal);
+            mesas.Controls.Add(MesaMadera);
             mesas.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             mesas.ForeColor = SystemColors.ButtonHighlight;
             mesas.Location = new Point(54, 116);
             mesas.Name = "mesas";
             mesas.RightToLeft = RightToLeft.No;
             mesas.Size = new Size(229, 148);
-            mesas.TabIndex = 9;
+            mesas.TabIndex = 10;
             mesas.TabStop = false;
             mesas.Text = "Mesas";
             // 
@@ -211,8 +210,8 @@
         private Button CrearSillas;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
+        private RadioButton mesaMetal;
+        private RadioButton MesaMadera;
         private GroupBox mesas;
         private GroupBox sillas;
         private Button CrearMesa;

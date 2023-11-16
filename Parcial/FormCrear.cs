@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
     public partial class FormCrear : Form
     {
-        public FormCrear()
+        CambiarColor cambiarColor;
+        public FormCrear(CambiarColor cambiarColor)
         {
             InitializeComponent();
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
         }
 
         private void CrearSillas_Click(object sender, EventArgs e)
@@ -21,8 +25,6 @@ namespace Parcial
                     silla = ((RadioButton)item).Text;
                 }
             }
-
-
             SillaMadera.CrearSillaMadera(silla);
             SillaMetal.CrearSillaMetal(silla);
         }
@@ -39,7 +41,7 @@ namespace Parcial
                 }
             }
             MesaMetal.CrearMesaMetal(mesa);
-            MesaMadera.CrearMesaMadera(mesa);
+            Parcial.MesaMadera.CrearMesaMadera(mesa);
         }
 
         private void CrearTodo_Click(object sender, EventArgs e)
@@ -54,7 +56,7 @@ namespace Parcial
                 }
             }
             MesaMetal.CrearMesaMetal(mesa);
-            MesaMadera.CrearMesaMadera(mesa);
+            Parcial.MesaMadera.CrearMesaMadera(mesa);
 
 
             string silla = this.sillas.Text;
@@ -72,7 +74,7 @@ namespace Parcial
         private void VerMaterial_Click(object sender, EventArgs e)
         {
 
-            Material mostrar = new Material();
+            Material mostrar = new Material(cambiarColor);
             mostrar.Show();
         }
 
@@ -81,7 +83,6 @@ namespace Parcial
 
             Close();
         }
-
 
     }
 }

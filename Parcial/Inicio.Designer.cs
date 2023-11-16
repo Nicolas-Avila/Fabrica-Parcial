@@ -39,6 +39,7 @@
             groupBox1 = new GroupBox();
             btnSupervisor = new Button();
             btnOperario = new Button();
+            dia = new Button();
             noche = new Button();
             ((System.ComponentModel.ISupportInitialize)id).BeginInit();
             groupBox1.SuspendLayout();
@@ -143,6 +144,7 @@
             btnSupervisor.TabIndex = 10;
             btnSupervisor.Text = "Secion supervisor";
             btnSupervisor.UseVisualStyleBackColor = true;
+            btnSupervisor.Click += btnSupervisor_Click;
             // 
             // btnOperario
             // 
@@ -152,14 +154,25 @@
             btnOperario.TabIndex = 11;
             btnOperario.Text = "Secion operario";
             btnOperario.UseVisualStyleBackColor = true;
+            btnOperario.Click += btnOperario_Click;
+            // 
+            // dia
+            // 
+            dia.Location = new Point(12, 444);
+            dia.Name = "dia";
+            dia.Size = new Size(92, 22);
+            dia.TabIndex = 12;
+            dia.Text = "Modo Dia";
+            dia.UseVisualStyleBackColor = true;
+            dia.Click += dia_Click;
             // 
             // noche
             // 
-            noche.Location = new Point(580, 143);
+            noche.Location = new Point(12, 415);
             noche.Name = "noche";
-            noche.Size = new Size(105, 97);
-            noche.TabIndex = 12;
-            noche.Text = "button1";
+            noche.Size = new Size(92, 23);
+            noche.TabIndex = 13;
+            noche.Text = "Modo Noche";
             noche.UseVisualStyleBackColor = true;
             noche.Click += noche_Click;
             // 
@@ -170,6 +183,7 @@
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(802, 478);
             Controls.Add(noche);
+            Controls.Add(dia);
             Controls.Add(btnOperario);
             Controls.Add(btnSupervisor);
             Controls.Add(groupBox1);
@@ -197,6 +211,7 @@
         private GroupBox groupBox1;
         private Button btnSupervisor;
         private Button btnOperario;
+        private Button dia;
         private Button noche;
     }
 }

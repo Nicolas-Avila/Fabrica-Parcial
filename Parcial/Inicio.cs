@@ -1,19 +1,21 @@
+using System.Drawing;
 using System.Reflection;
 using Trabajador;
 using static Parcial.Config;
+
 
 namespace Parcial
 {
     public partial class Inicio : Form
     {
+        private Color fondo;
+        public delegate void CambiarColor(Form instancia);
 
-        private Color tema;
-        public Inicio()
+        public Inicio(Color fondo)
         {
             InitializeComponent();
-            this.tema = tema;
+            this.fondo = fondo;
         }
-
 
         private void aceptar_Click_1(object sender, EventArgs e)
         {
@@ -22,64 +24,109 @@ namespace Parcial
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
 
-
-
             if (Operario.Ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
             {
-                FormCrear formOperador = new FormCrear();
-                //MessageBox.Show(ingresanteOp.Info());
+                FormCrear formOperador = new FormCrear(cambiarColor);
                 formOperador.Show();
-
             }
-
-
             if (Supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
             {
-                FormSupervisor formSupervisor = new FormSupervisor(this);
-                //MessageBox.Show(Supervisor.Info());
+                FormSupervisor formSupervisor = new FormSupervisor(this, cambiarColor);
                 this.Hide();
                 formSupervisor.Show();
+            }
+
+        }
+        private void dia_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
+            Config colores = new Config();
+            try
+            {
+                if (File.Exists(path))
+                {
+                    Archivos<Config> colorJs = new Archivos<Config>();
+                    Config coloresJson = colorJs.Leer_JSON<Config>();
+                    fondo = ColorTranslator.FromHtml(coloresJson.ColorClaro);
+                    cambiarColor(this);
+                }
+                else
+                {
+                    Archivos<Config> colorJs = new Archivos<Config>();
+                    colorJs.EscribirJson<Config>(colores);
+                }
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+
             }
 
         }
 
         private void noche_Click(object sender, EventArgs e)
         {
-
-            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\hola.json";
+            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
             Config colores = new Config();
-
             try
             {
-                if (!(File.Exists(path)))
+                if (File.Exists(path))
                 {
-                    Archivos<Config>.EscribirJson(colores);
+                    Archivos<Config> colorJs = new Archivos<Config>();
+                    Config coloresJson = colorJs.Leer_JSON<Config>();
+                    fondo = ColorTranslator.FromHtml(coloresJson.ColorOscuro);
+                    cambiarColor(this);
                 }
                 else
                 {
-                    MessageBox.Show("awd");
-                    Config coloresJson = Archivos<Config>.Leer_JSON<Config>();
-                    tema = ColorTranslator.FromHtml(coloresJson.ColorClaro);
-                    cambiarColor(this);
+                    Archivos<Config> colorJs = new Archivos<Config>();
+                    colorJs.EscribirJson<Config>(colores);
                 }
             }
             catch (Exception ex)
             {
-                //TextoTXT.MostrarInfoTXT(DateTime.Now, $"Error al cambiar color.",
-                //MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+
             }
+        }
+
+        private void cambiarColor(Form instancia)
+        {
+            instancia.BackColor = fondo;
 
         }
-        private void cambiarColor(Form instancia)
+
+        private void btnSupervisor_Click(object sender, EventArgs e)
         {
             try
             {
-                instancia.BackColor = tema;
+                List<Supervisor> lista = CrudDAO.LeerSupervisor();
+
+                    this.nombre.Text = lista[55].Nombre;
+                    this.apellido.Text = lista[1].Apellido;
+                    this.id.Value = lista[1].Id;
+
             }
             catch (Exception ex)
             {
-                //TextoTXT.MostrarInfoTXT(DateTime.Now, $"Error al cambiar color: {ex.Message}.",
-                //MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Supervisor");
+            }
+        }
+
+        private void btnOperario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Operario> lista = CrudDAO.LeerOperarios();
+
+                this.nombre.Text = lista[0].Nombre;
+                this.apellido.Text = lista[0].Apellido;
+                this.id.Value = lista[0].Id;
+
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Operador");
             }
         }
     }

@@ -8,17 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajador;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
     public partial class FormNewOperario : Form
     {
 
-
-        public FormNewOperario()
+        protected CambiarColor cambiarColor;
+        public FormNewOperario(CambiarColor cambiarColor)
         {
             InitializeComponent();
-            
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
         }
 
         private void carga()
@@ -42,7 +44,7 @@ namespace Parcial
             if (cuadroOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)cuadroOperario.CurrentRow.DataBoundItem;
-                FormActualizar formActualizarOperador = new FormActualizar(operario.Id, "operador");
+                FormActualizar formActualizarOperador = new FormActualizar(operario.Id, "operador", cambiarColor);
                 formActualizarOperador.ShowDialog();
                 carga();
             }

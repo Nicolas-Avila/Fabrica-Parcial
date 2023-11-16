@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
+
     public partial class FormRellenar : Form
     {
-        public FormRellenar()
+        protected CambiarColor cambiarColor;
+        public FormRellenar(CambiarColor cambiarColor)
         {
             InitializeComponent();
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
         }
 
         private void añadir_Click(object sender, EventArgs e)

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Parcial;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,8 +40,9 @@ namespace Trabajador
                 command.Parameters.AddWithValue("@APELLIDO", apellido);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally { connection.Close(); }
@@ -57,9 +60,9 @@ namespace Trabajador
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -86,8 +89,9 @@ namespace Trabajador
 
                 return operarios;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -113,8 +117,9 @@ namespace Trabajador
 
                 return supervisores;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally
@@ -147,6 +152,5 @@ namespace Trabajador
 
 
     }
-
 
 }

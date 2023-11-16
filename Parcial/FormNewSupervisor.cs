@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajador;
+using static Parcial.Inicio;
 
 namespace Parcial
 {
     public partial class FormNewSupervisor : Form
     {
-        public FormNewSupervisor()
+        protected CambiarColor cambiarColor;
+        public FormNewSupervisor(CambiarColor cambiarColor)
         {
             InitializeComponent();
-            
+            this.cambiarColor = cambiarColor;
+            cambiarColor(this);
+
         }
         private void carga()
         {
@@ -40,7 +44,7 @@ namespace Parcial
             if (cuadroSupervisor.SelectedRows.Count > 0)
             {
                 Supervisor supervisor = (Supervisor)cuadroSupervisor.CurrentRow.DataBoundItem;
-                FormActualizar formActualizarOperador = new FormActualizar(supervisor.Id, "supervisor");
+                FormActualizar formActualizarOperador = new FormActualizar(supervisor.Id, "supervisor", cambiarColor);
                 formActualizarOperador.ShowDialog();
                 carga();
             }
@@ -60,5 +64,6 @@ namespace Parcial
         {
             carga();
         }
+
     }
 }

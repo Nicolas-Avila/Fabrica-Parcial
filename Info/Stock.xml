@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItemStock xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ItemStock>
+    <Componente>madera</Componente>
+    <Cantidad>10</Cantidad>
+  </ItemStock>
+  <ItemStock>
+    <Componente>metal</Componente>
+    <Cantidad>10</Cantidad>
+  </ItemStock>
+  <ItemStock>
+    <Componente>plastico</Componente>
+    <Cantidad>10</Cantidad>
+  </ItemStock>
+  <ItemStock>
+    <Componente>tela</Componente>
+    <Cantidad>11</Cantidad>
+  </ItemStock>
+</ArrayOfItemStock>

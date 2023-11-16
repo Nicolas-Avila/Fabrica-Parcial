@@ -1,0 +1,10 @@
+16/11/2023 17:30:04
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
+16/11/2023 17:36:46
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
