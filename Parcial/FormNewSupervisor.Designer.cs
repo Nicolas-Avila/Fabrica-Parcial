@@ -37,13 +37,15 @@
             Supervisor = new Label();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)cuadroSupervisor).BeginInit();
             SuspendLayout();
             // 
             // cuadroSupervisor
             // 
+            cuadroSupervisor.BackgroundColor = Color.Cornsilk;
             cuadroSupervisor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            cuadroSupervisor.Location = new Point(35, 113);
+            cuadroSupervisor.Location = new Point(43, 113);
             cuadroSupervisor.Name = "cuadroSupervisor";
             cuadroSupervisor.RowTemplate.Height = 25;
             cuadroSupervisor.Size = new Size(367, 158);
@@ -71,31 +73,32 @@
             // 
             // nombre
             // 
-            nombre.Location = new Point(563, 142);
+            nombre.Location = new Point(588, 157);
             nombre.Name = "nombre";
             nombre.Size = new Size(100, 23);
             nombre.TabIndex = 3;
             // 
             // apellido
             // 
-            apellido.Location = new Point(563, 224);
+            apellido.Location = new Point(588, 248);
             apellido.Name = "apellido";
             apellido.Size = new Size(100, 23);
             apellido.TabIndex = 4;
             // 
             // CrearOperario
             // 
-            CrearOperario.Location = new Point(554, 320);
+            CrearOperario.Location = new Point(579, 322);
             CrearOperario.Name = "CrearOperario";
             CrearOperario.Size = new Size(109, 41);
             CrearOperario.TabIndex = 5;
-            CrearOperario.Text = "Crear Operario";
+            CrearOperario.Text = "Crear Supervisor";
             CrearOperario.UseVisualStyleBackColor = true;
             CrearOperario.Click += CrearOperario_Click;
             // 
             // Supervisor
             // 
             Supervisor.AutoSize = true;
+            Supervisor.BackColor = Color.LightGoldenrodYellow;
             Supervisor.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             Supervisor.Location = new Point(323, 30);
             Supervisor.Name = "Supervisor";
@@ -107,7 +110,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(563, 100);
+            label1.Location = new Point(589, 113);
             label1.Name = "label1";
             label1.Size = new Size(85, 28);
             label1.TabIndex = 7;
@@ -117,17 +120,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(563, 181);
+            label2.Location = new Point(589, 205);
             label2.Name = "label2";
             label2.Size = new Size(86, 28);
             label2.TabIndex = 8;
             label2.Text = "Apellido";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(554, 70);
+            label3.Name = "label3";
+            label3.Size = new Size(168, 28);
+            label3.TabIndex = 9;
+            label3.Text = "Nuevo Supervisor";
+            // 
             // FormNewSupervisor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Supervisor);
@@ -157,5 +172,6 @@
         private Label Supervisor;
         private Label label1;
         private Label label2;
+        private Label label3;
     }
 }

@@ -15,17 +15,29 @@ namespace Parcial
     public partial class Productos : Form
     {
         protected CambiarColor cambiarColor;
+        private Inventario inventario;
+
         public Productos(CambiarColor cambiarColor)
         {
+            // Corrige esta línea para asignar el valor a la variable de instancia, no declarar una nueva variable
+            this.inventario = new Inventario();
+
             InitializeComponent();
             this.cambiarColor = cambiarColor;
             cambiarColor(this);
-            dataGridView1.DataSource = Inventario.ProductosMMadera;
-            dataGridView2.DataSource = Inventario.ProductosMMetal;
-            dataGridView3.DataSource = Inventario.ProductosSMadera;
-            dataGridView4.DataSource = Inventario.ProductoSMetal;
+            dataGridView1.DataSource = inventario.ProductosMMadera;
+            dataGridView2.DataSource = inventario.ProductosMMetal;
+            dataGridView3.DataSource = inventario.ProductosSMadera;
+            dataGridView4.DataSource = inventario.ProductoSMetal;
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Ahora puedes acceder a la variable de instancia correctamente
+            Console.WriteLine("HOLAA");
+            foreach (var item in inventario.ProductosMMadera)
+            {
+            }
+        }
     }
 }

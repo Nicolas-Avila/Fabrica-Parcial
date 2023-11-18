@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             listaMaterial = new Button();
@@ -39,15 +39,15 @@
             // 
             dataGridView1.BackgroundColor = Color.NavajoWhite;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(256, 108);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.Location = new Point(119, 102);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(278, 206);
@@ -60,7 +60,7 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(285, 36);
+            label1.Location = new Point(155, 29);
             label1.Name = "label1";
             label1.Size = new Size(214, 39);
             label1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // listaMaterial
             // 
-            listaMaterial.Location = new Point(300, 356);
+            listaMaterial.Location = new Point(169, 344);
             listaMaterial.Name = "listaMaterial";
             listaMaterial.Size = new Size(181, 55);
             listaMaterial.TabIndex = 2;
@@ -81,7 +81,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(559, 433);
             Controls.Add(listaMaterial);
             Controls.Add(label1);
             Controls.Add(dataGridView1);

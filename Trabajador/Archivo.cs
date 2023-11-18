@@ -10,11 +10,11 @@ namespace Parcial
 {
     public class Archivos<T>:Iarchios<T>
     {
-         string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info";
+         string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Archivos";
 
         public bool CrearTxt(string dato)
         {
-            string archivo = $"{path}/Errores.txt";
+            string archivo = $"{path}/Errores.log";
             try
             {
                 using (StreamWriter sw = new StreamWriter(archivo, true))

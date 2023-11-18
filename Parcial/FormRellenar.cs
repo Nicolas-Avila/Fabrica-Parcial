@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajador;
 using static Parcial.Inicio;
 
 namespace Parcial
@@ -23,29 +24,33 @@ namespace Parcial
         }
 
         private void añadir_Click(object sender, EventArgs e)
+
         {
+            Inventario inventario = new Inventario ();
+
             int cantTela = (int)this.numericUpDown1.Value;
             int cantMetal = (int)this.numericUpDown2.Value;
             int cantMadera = (int)this.numericUpDown3.Value;
             int cantPlastico = (int)this.numericUpDown4.Value;
 
-            foreach (string material in Inventario.Stock.Keys)
+            foreach (string material in inventario.Stock.Keys)
             {
                 if (material == "madera")
                 {
-                    Inventario.Stock[material] += cantMadera;
+                    inventario.Stock[material] += cantMadera;
                 }
                 else if (material == "tela")
                 {
-                    Inventario.Stock[material] += cantTela;
+                    inventario.Stock[material] += cantTela;
                 }
                 else if (material == "plastico")
                 {
-                    Inventario.Stock[material] += cantPlastico;
+                    inventario.Stock[material] += cantPlastico;
                 }
                 else if (material == "metal")
                 {
-                    Inventario.Stock[material] += cantMetal;
+                    inventario.Stock[material] += cantMetal;
+                    
                 }
             }
             string mensaje = $"Cantidad de tela: {cantTela.ToString()}\n" +

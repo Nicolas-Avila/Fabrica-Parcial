@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Trabajador;
 using static Parcial.Inicio;
 
 namespace Parcial
@@ -7,6 +8,7 @@ namespace Parcial
     public partial class FormCrear : Form
     {
         CambiarColor cambiarColor;
+
         public FormCrear(CambiarColor cambiarColor)
         {
             InitializeComponent();
@@ -16,6 +18,7 @@ namespace Parcial
 
         private void CrearSillas_Click(object sender, EventArgs e)
         {
+
             string silla = this.sillas.Text;
 
             foreach (Control item in sillas.Controls)
@@ -25,13 +28,41 @@ namespace Parcial
                     silla = ((RadioButton)item).Text;
                 }
             }
-            SillaMadera.CrearSillaMadera(silla);
-            SillaMetal.CrearSillaMetal(silla);
+
+            if (silla == "Silla de madera")
+            {
+
+                if (Inventario.VerificarStock("madera", "tela"))
+                {
+                    SillaMadera.CrearSillaMadera(silla);
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
+            }
+            if (silla == "Silla de metal")
+            {
+                if (Inventario.VerificarStock("metal", "tela"))
+                {
+                    SillaMetal.CrearSillaMetal(silla);
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
+            }
+
         }
 
         private void CrearMesa_Click(object sender, EventArgs e)
         {
             string mesa = this.mesas.Text;
+            
 
             foreach (Control item in mesas.Controls)//Controls es el groupbox
             {
@@ -40,8 +71,33 @@ namespace Parcial
                     mesa = ((RadioButton)item).Text;
                 }
             }
-            MesaMetal.CrearMesaMetal(mesa);
-            Parcial.MesaMadera.CrearMesaMadera(mesa);
+
+            if (mesa == "Mesa de madera")
+            {
+                if (Inventario.VerificarStock("madera", "plastico"))
+                {
+                    MesaDeMadera.CrearMesaMadera(mesa);
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
+            } 
+            if (mesa == "Mesa de metal")
+            {
+                if (Inventario.VerificarStock("metal", "plastico"))
+                {
+                    MesaMetal.CrearMesaMetal(mesa);
+                    FormProcesando formProcesando = new FormProcesando();
+                    formProcesando.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: falta de producto");
+                }
+            }
         }
 
         private void CrearTodo_Click(object sender, EventArgs e)
@@ -56,7 +112,7 @@ namespace Parcial
                 }
             }
             MesaMetal.CrearMesaMetal(mesa);
-            Parcial.MesaMadera.CrearMesaMadera(mesa);
+            //MesaMadera.CrearMesaMadera(mesa);
 
 
             string silla = this.sillas.Text;

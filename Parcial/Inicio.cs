@@ -39,7 +39,7 @@ namespace Parcial
         }
         private void dia_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
+            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Archivos\Configuracion.json";
             Config colores = new Config();
             try
             {
@@ -58,7 +58,7 @@ namespace Parcial
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
 
             }
 
@@ -66,7 +66,7 @@ namespace Parcial
 
         private void noche_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
+            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Archivos\Configuracion.json";
             Config colores = new Config();
             try
             {
@@ -85,7 +85,7 @@ namespace Parcial
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
 
             }
         }
@@ -93,7 +93,6 @@ namespace Parcial
         private void cambiarColor(Form instancia)
         {
             instancia.BackColor = fondo;
-
         }
 
         private void btnSupervisor_Click(object sender, EventArgs e)
@@ -102,14 +101,14 @@ namespace Parcial
             {
                 List<Supervisor> lista = CrudDAO.LeerSupervisor();
 
-                    this.nombre.Text = lista[55].Nombre;
-                    this.apellido.Text = lista[1].Apellido;
-                    this.id.Value = lista[1].Id;
+                this.nombre.Text = lista[0].Nombre;
+                this.apellido.Text = lista[0].Apellido;
+                this.id.Value = lista[0].Id;
 
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Supervisor");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
 
@@ -126,7 +125,7 @@ namespace Parcial
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Operador");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
     }

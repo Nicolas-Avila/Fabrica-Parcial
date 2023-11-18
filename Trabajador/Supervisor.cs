@@ -32,16 +32,5 @@ namespace Trabajador
             return false;
         }
 
-        //public override string Info()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    sb.AppendLine("Bienvenido Supervisor");
-        //    sb.AppendLine($"Nombre: {Nombre}");
-        //    sb.AppendLine($"Apellido: {Apellido}");
-        //    sb.AppendLine($"ID: {Id}");
-        //    return sb.ToString();
-        //}
-
-
     }
 }

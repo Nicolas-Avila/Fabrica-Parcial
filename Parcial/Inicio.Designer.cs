@@ -41,6 +41,7 @@
             btnOperario = new Button();
             dia = new Button();
             noche = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)id).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -176,12 +177,22 @@
             noche.UseVisualStyleBackColor = true;
             noche.Click += noche_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(118, 225);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 14;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(802, 478);
+            Controls.Add(button1);
             Controls.Add(noche);
             Controls.Add(dia);
             Controls.Add(btnOperario);
@@ -213,5 +224,6 @@
         private Button btnOperario;
         private Button dia;
         private Button noche;
+        private Button button1;
     }
 }

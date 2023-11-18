@@ -41,6 +41,7 @@
             label5 = new Label();
             label6 = new Label();
             label1 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -174,12 +175,23 @@
             label1.TabIndex = 11;
             label1.Text = "Productos";
             // 
-            // Informacion
+            // button1
+            // 
+            button1.Location = new Point(316, 435);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 38);
+            button1.TabIndex = 12;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(766, 535);
+            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -189,7 +201,7 @@
             Controls.Add(dataGridView3);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
-            Name = "Informacion";
+            Name = "Productos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Informacion";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -211,5 +223,6 @@
         private Label label6;
         private Button ListaProductos;
         private Label label1;
+        private Button button1;
     }
 }
