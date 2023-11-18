@@ -102,9 +102,9 @@ namespace Parcial
             {
                 List<Supervisor> lista = CrudDAO.LeerSupervisor();
 
-                    this.nombre.Text = lista[55].Nombre;
-                    this.apellido.Text = lista[1].Apellido;
-                    this.id.Value = lista[1].Id;
+                    this.nombre.Text = lista[0].Nombre;
+                    this.apellido.Text = lista[0].Apellido;
+                    this.id.Value = lista[0].Id;
 
             }
             catch (Exception ex)

@@ -8,3 +8,23 @@ Clase:Inicio
 Metodo:btnSupervisor_Click
 Error:Inicio Supervisor
 
+18/11/2023 18:46:44
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
+18/11/2023 18:46:45
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
+18/11/2023 18:46:45
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
+18/11/2023 18:46:45
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Inicio Supervisor
+
