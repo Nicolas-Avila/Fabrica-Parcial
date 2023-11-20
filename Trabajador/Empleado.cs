@@ -19,8 +19,6 @@ namespace Trabajador
         public string Apellido { get => apellido; set => apellido = value; }
         public int Id { get => id; set => id = value; }
 
-        
-       // public abstract string Info();
-
+      
     }
 }

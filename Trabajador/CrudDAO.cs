@@ -128,7 +128,28 @@ namespace Trabajador
             }
         }
 
-        public static void Eliminar(int id , string trabajo)
+        public static void Eliminar(int id)
+        {
+            try
+            {
+                command.Parameters.Clear();
+                connection.Open();
+                command.CommandText = $"DELETE FROM OPERADOR WHERE ID = {id}";
+                command.Parameters.AddWithValue("@ID", id);
+                int rows = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static void Eliminar(int id, string trabajo)
         {
             try
             {
@@ -138,9 +159,9 @@ namespace Trabajador
                 command.Parameters.AddWithValue("@ID", id);
                 int rows = command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 throw;
             }
             finally

@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajador;
+using Fabrica;
 using static Parcial.Inicio;
 
 namespace Parcial
 {
     public partial class FormSupervisor : Form
     {
-
         private Inicio formularioInicio;
         protected CambiarColor cambiarColor;
         public FormSupervisor(Inicio formularioInicio, CambiarColor cambiarColor)
@@ -94,5 +94,8 @@ namespace Parcial
             FormNewSupervisor formNewSupervisor = new FormNewSupervisor(cambiarColor);
             formNewSupervisor.Show();
         }
+
+
+
     }
 }

@@ -15,7 +15,6 @@ namespace Trabajador
         {
                         
         }
-
         /// <summary>
         /// Verifica el ingreso de un operario con nombre, apellido e ID del operario.
         /// </summary>
@@ -23,7 +22,6 @@ namespace Trabajador
 
             foreach (Operario operario in ListOperario)
             {
-
                 if (operario.Nombre == nombre && operario.Apellido == apellido && operario.Id == id)
                 {
                     return true;

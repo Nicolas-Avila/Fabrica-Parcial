@@ -28,8 +28,6 @@ namespace Parcial
         private static List<MesaMetal> productosMMetal = new List<MesaMetal>();
 
 
-
-
         /// <summary>
         ///  Descuenta el material del inventario.
         /// </summary>
@@ -47,7 +45,6 @@ namespace Parcial
                 }
             }
         }
-
 
         public static bool VerificarStock(string material1, string material2)
         {
@@ -70,10 +67,6 @@ namespace Parcial
             }
             return false;
         }
-
-
-
-
 
     }
 }

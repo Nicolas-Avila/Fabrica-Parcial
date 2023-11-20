@@ -55,11 +55,10 @@ namespace Parcial
             if (cuadroOperario.SelectedRows.Count > 0)
             {
                 Operario operario = (Operario)cuadroOperario.CurrentRow.DataBoundItem;
-                CrudDAO.Eliminar(operario.Id, "OPERADOR");
+                CrudDAO.Eliminar(operario.Id);
                 carga();
             }
         }
-
         private void FormNewOperario_Load(object sender, EventArgs e)
         {
             carga();

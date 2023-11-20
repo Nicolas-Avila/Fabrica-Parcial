@@ -17,15 +17,12 @@ namespace Parcial
         public Material(CambiarColor cambiarColor)
         {
             InitializeComponent();
-
             var materialesOrdenados = Inventario.Stock.Select(item => new { Componente = item.Key, Cantidad = item.Value }).ToList();
             materialesOrdenados.Sort((material1, material2) => material1.Cantidad - material2.Cantidad);
             dataGridView1.DataSource = materialesOrdenados;
             this.cambiarColor = cambiarColor;
             cambiarColor(this);
-
         }
-    
 
         private void listaMaterial_Click(object sender, EventArgs e)
         {

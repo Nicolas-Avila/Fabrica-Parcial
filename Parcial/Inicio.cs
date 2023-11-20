@@ -58,7 +58,7 @@ namespace Parcial
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
 
             }
 
@@ -85,7 +85,7 @@ namespace Parcial
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "color");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
 
             }
         }
@@ -102,14 +102,14 @@ namespace Parcial
             {
                 List<Supervisor> lista = CrudDAO.LeerSupervisor();
 
-                    this.nombre.Text = lista[0].Nombre;
-                    this.apellido.Text = lista[0].Apellido;
-                    this.id.Value = lista[0].Id;
+                this.nombre.Text = lista[1].Nombre;
+                this.apellido.Text = lista[1].Apellido;
+                this.id.Value = lista[1].Id;
 
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Supervisor");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
 
@@ -119,15 +119,21 @@ namespace Parcial
             {
                 List<Operario> lista = CrudDAO.LeerOperarios();
 
-                this.nombre.Text = lista[0].Nombre;
-                this.apellido.Text = lista[0].Apellido;
-                this.id.Value = lista[0].Id;
+                this.nombre.Text = lista[1].Nombre;
+                this.apellido.Text = lista[1].Apellido;
+                this.id.Value = lista[1].Id;
 
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, "Inicio Operador");
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
             }
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            btnSupervisor.Click += btnSupervisor_Click;
+            btnOperario.Click += btnOperario_Click;
         }
     }
 }
