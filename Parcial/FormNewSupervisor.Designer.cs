@@ -42,6 +42,7 @@
             // 
             // cuadroSupervisor
             // 
+            cuadroSupervisor.BackgroundColor = Color.LightGoldenrodYellow;
             cuadroSupervisor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             cuadroSupervisor.Location = new Point(35, 113);
             cuadroSupervisor.Name = "cuadroSupervisor";
@@ -96,6 +97,7 @@
             // Supervisor
             // 
             Supervisor.AutoSize = true;
+            Supervisor.BackColor = Color.LightGoldenrodYellow;
             Supervisor.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             Supervisor.Location = new Point(323, 30);
             Supervisor.Name = "Supervisor";

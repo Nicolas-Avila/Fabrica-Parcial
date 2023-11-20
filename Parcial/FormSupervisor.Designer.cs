@@ -69,6 +69,7 @@
             label1.Size = new Size(277, 37);
             label1.TabIndex = 2;
             label1.Text = "Bienvenido supervisor";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // button3
             // 

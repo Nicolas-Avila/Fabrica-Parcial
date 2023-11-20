@@ -130,9 +130,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.LightGoldenrodYellow;
             label5.BorderStyle = BorderStyle.Fixed3D;
             label5.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonHighlight;
+            label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(249, 30);
             label5.Name = "label5";
             label5.Size = new Size(243, 39);

@@ -36,7 +36,6 @@
             mesas = new GroupBox();
             sillas = new GroupBox();
             CrearMesa = new Button();
-            CrearTodo = new Button();
             VerMaterial = new Button();
             label1 = new Label();
             Cerrar = new Button();
@@ -137,19 +136,9 @@
             CrearMesa.UseVisualStyleBackColor = true;
             CrearMesa.Click += CrearMesa_Click;
             // 
-            // CrearTodo
-            // 
-            CrearTodo.Location = new Point(336, 175);
-            CrearTodo.Name = "CrearTodo";
-            CrearTodo.Size = new Size(125, 44);
-            CrearTodo.TabIndex = 12;
-            CrearTodo.Text = "Crear el par";
-            CrearTodo.UseVisualStyleBackColor = true;
-            CrearTodo.Click += CrearTodo_Click;
-            // 
             // VerMaterial
             // 
-            VerMaterial.Location = new Point(336, 318);
+            VerMaterial.Location = new Point(333, 191);
             VerMaterial.Name = "VerMaterial";
             VerMaterial.Size = new Size(125, 44);
             VerMaterial.TabIndex = 13;
@@ -160,9 +149,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.LightGoldenrodYellow;
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(270, 40);
             label1.Name = "label1";
             label1.Size = new Size(254, 39);
@@ -189,7 +179,6 @@
             Controls.Add(Cerrar);
             Controls.Add(label1);
             Controls.Add(VerMaterial);
-            Controls.Add(CrearTodo);
             Controls.Add(CrearMesa);
             Controls.Add(sillas);
             Controls.Add(mesas);
@@ -215,7 +204,6 @@
         private GroupBox mesas;
         private GroupBox sillas;
         private Button CrearMesa;
-        private Button CrearTodo;
         private Button VerMaterial;
         private Label label1;
         private Button Cerrar;

@@ -19,7 +19,6 @@ namespace Parcial
 
         private void aceptar_Click_1(object sender, EventArgs e)
         {
-
             string nombre = this.nombre.Text;
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
@@ -29,13 +28,16 @@ namespace Parcial
                 FormCrear formOperador = new FormCrear(cambiarColor);
                 formOperador.Show();
             }
-            if (Supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
+            else if (Supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this, cambiarColor);
                 this.Hide();
                 formSupervisor.Show();
             }
-
+            else
+            {
+                MessageBox.Show("Ese trabajador no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void dia_Click(object sender, EventArgs e)
         {

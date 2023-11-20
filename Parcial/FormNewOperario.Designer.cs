@@ -35,11 +35,15 @@
             apellido = new TextBox();
             CrearOperario = new Button();
             label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)cuadroOperario).BeginInit();
             SuspendLayout();
             // 
             // cuadroOperario
             // 
+            cuadroOperario.BackgroundColor = Color.LemonChiffon;
             cuadroOperario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             cuadroOperario.Location = new Point(30, 78);
             cuadroOperario.Name = "cuadroOperario";
@@ -94,18 +98,53 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.LightGoldenrodYellow;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(333, 26);
+            label1.Location = new Point(333, 9);
             label1.Name = "label1";
             label1.Size = new Size(122, 37);
             label1.TabIndex = 6;
             label1.Text = "Operario";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(517, 66);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 25);
+            label2.TabIndex = 7;
+            label2.Text = "Nuevo trabajador";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(547, 98);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 25);
+            label3.TabIndex = 8;
+            label3.Text = "Nombre";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(547, 164);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 25);
+            label4.TabIndex = 9;
+            label4.Text = "Apellido";
+            // 
             // FormNewOperario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(CrearOperario);
             Controls.Add(apellido);
@@ -131,5 +170,8 @@
         private TextBox apellido;
         private Button CrearOperario;
         private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

@@ -44,33 +44,6 @@ namespace Parcial
             Parcial.MesaMadera.CrearMesaMadera(mesa);
         }
 
-        private void CrearTodo_Click(object sender, EventArgs e)
-        {
-
-            string mesa = this.mesas.Text;
-            foreach (Control item in mesas.Controls)
-            {
-                if (item is RadioButton && ((RadioButton)item).Checked)
-                {
-                    mesa = ((RadioButton)item).Text;
-                }
-            }
-            MesaMetal.CrearMesaMetal(mesa);
-            Parcial.MesaMadera.CrearMesaMadera(mesa);
-
-
-            string silla = this.sillas.Text;
-            foreach (Control item in sillas.Controls)
-            {
-                if (item is RadioButton && ((RadioButton)item).Checked)
-                {
-                    silla = ((RadioButton)item).Text;
-                }
-            }
-            SillaMadera.CrearSillaMadera(silla);
-            SillaMetal.CrearSillaMetal(silla);
-        }
-
         private void VerMaterial_Click(object sender, EventArgs e)
         {
 

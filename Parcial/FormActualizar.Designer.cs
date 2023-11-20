@@ -33,6 +33,7 @@
             actualizar = new Button();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // nombre
@@ -79,12 +80,24 @@
             label2.TabIndex = 4;
             label2.Text = "Apellido";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.LightGoldenrodYellow;
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(146, 22);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 28);
+            label3.TabIndex = 5;
+            label3.Text = "Actualizar";
+            // 
             // FormActualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(399, 371);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(actualizar);
@@ -104,5 +117,6 @@
         private Button actualizar;
         private Label label1;
         private Label label2;
+        private Label label3;
     }
 }

@@ -34,10 +34,10 @@ namespace Parcial
 
         private void masInfo_Click(object sender, EventArgs e)
         {
-            Productos mostrarOperario = new Productos(cambiarColor);
+            Productos productos = new Productos(cambiarColor);
 
             Hide();
-            DialogResult result = mostrarOperario.ShowDialog();
+            DialogResult result = productos.ShowDialog();
 
             if (result == DialogResult.Cancel)
             {
@@ -61,10 +61,10 @@ namespace Parcial
 
         private void productos_Click(object sender, EventArgs e)
         {
-            FormCrear formOperador = new FormCrear(cambiarColor);
+            FormCrear formCrear = new FormCrear(cambiarColor);
 
             Hide();
-            DialogResult result = formOperador.ShowDialog();
+            DialogResult result = formCrear.ShowDialog();
 
             if (result == DialogResult.Cancel)
             {
@@ -94,8 +94,6 @@ namespace Parcial
             FormNewSupervisor formNewSupervisor = new FormNewSupervisor(cambiarColor);
             formNewSupervisor.Show();
         }
-
-
 
     }
 }
