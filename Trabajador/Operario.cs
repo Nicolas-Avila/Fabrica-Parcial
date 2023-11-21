@@ -18,16 +18,23 @@ namespace Trabajador
         /// <summary>
         /// Verifica el ingreso de un operario con nombre, apellido e ID del operario.
         /// </summary>
-        public static bool Ingreso (string nombre, string apellido, int id,List<Operario>ListOperario) {
+        public override bool Ingreso<T>(string nombre, string apellido, int id, List<T> lista)
+        {
 
-            foreach (Operario operario in ListOperario)
+            if (typeof(T) == typeof(Operario))
             {
-                if (operario.Nombre == nombre && operario.Apellido == apellido && operario.Id == id)
+                // Convierte la lista a List<Operario> si el tipo genérico es Operario
+                List<Operario> listOperarios = lista as List<Operario>;
+
+                foreach (Operario operario in listOperarios)
                 {
-                    return true;
+                    if (operario.Nombre == nombre && operario.Apellido == apellido && operario.Id == id)
+                    {
+                        return true;
+                    }
                 }
             }
-                return false;
+            return false;
         }
 
 

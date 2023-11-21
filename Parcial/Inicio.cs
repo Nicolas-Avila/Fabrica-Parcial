@@ -22,13 +22,14 @@ namespace Parcial
             string nombre = this.nombre.Text;
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
-
-            if (Operario.Ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
+            Operario operario = new Operario(nombre,apellido,id);
+            Supervisor supervisor = new Supervisor(nombre,apellido,id);
+            if (operario.Ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
             {
                 FormCrear formOperador = new FormCrear(cambiarColor);
                 formOperador.Show();
             }
-            else if (Supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
+            else if (supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this, cambiarColor);
                 this.Hide();

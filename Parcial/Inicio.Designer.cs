@@ -166,7 +166,7 @@
             // 
             // noche
             // 
-            noche.Location = new Point(12, 415);
+            noche.Location = new Point(610, 70);
             noche.Name = "noche";
             noche.Size = new Size(92, 23);
             noche.TabIndex = 13;

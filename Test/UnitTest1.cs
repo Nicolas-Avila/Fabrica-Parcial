@@ -9,27 +9,6 @@ namespace Test
     public class UnitTest1
     {
         [TestMethod]
-        public void IngresoOperario_PuedeIniciaSecion_DeberiaRetornarTrue()
-        {
-            //Arrange
-            bool expected = true;
-            //Act
-            bool actual = Operario.Ingreso("tomas","gauto",1,CrudDAO.LeerOperarios()) ;
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        [TestMethod]
-        public void IngresoSupervisor_PuedeIniciaSecion_DeberiaRetornarTrue()
-        {
-            //Arrange
-            bool expected = true;
-            //Act
-            bool actual = Supervisor.Ingreso("facundo", "pepe", 10, CrudDAO.LeerSupervisor());
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
         public void Actualizar_DeberiaActualizarOperario_SipervisorEnBD()
         {
             // Arrange
@@ -39,12 +18,32 @@ namespace Test
             int id = 0; // Reemplaza con un ID existente en tu base de datos.
             string trabajos = (valorAleatorio == 0) ? "OPERADOR" : "SUPERVISOR";
             string trabajo = trabajos;
-
             // Act
             CrudDAO.Actualizar(nombre, apellido, id, trabajo);
-
-            // Assert: Agrega aserciones para verificar que el operario fue actualizado correctamente en la base de datos.
+                              
         }
 
+        [TestMethod]
+        public void IngresoOperario_PuedeIniciaSecion_DeberiaRetornarTrue()
+        {
+            Operario operario = new Operario("","",0);
+            //Arrange
+            bool expected = true;
+            //Act
+            bool actual = operario.Ingreso("testOperador", "testOperador", 0, CrudDAO.LeerOperarios()) ;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void IngresoSupervisor_PuedeIniciaSecion_DeberiaRetornarTrue()
+        {
+            Supervisor supervisor = new Supervisor("", "", 0);
+            //Arrange
+            bool expected = true;
+            //Act
+            bool actual = supervisor.Ingreso("testSupevisor", "testSupevisor", 0, CrudDAO.LeerSupervisor());
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
