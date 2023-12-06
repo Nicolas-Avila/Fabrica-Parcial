@@ -1,3 +1,4 @@
+using Fabrica;
 using System.Drawing;
 using System.Reflection;
 using Trabajador;
@@ -22,14 +23,14 @@ namespace Parcial
             string nombre = this.nombre.Text;
             string apellido = this.apellido.Text;
             int id = (int)this.id.Value;
-            Operario operario = new Operario(nombre,apellido,id);
-            Supervisor supervisor = new Supervisor(nombre,apellido,id);
-            if (operario.Ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
+            Operario operario = new Operario(nombre, apellido, id);
+            Supervisor supervisor = new Supervisor(nombre, apellido, id);
+            if (operario.ingreso(nombre, apellido, id, CrudDAO.LeerOperarios()))
             {
                 FormCrear formOperador = new FormCrear(cambiarColor);
                 formOperador.Show();
             }
-            else if (supervisor.Ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
+            else if (supervisor.ingreso(nombre, apellido, id, CrudDAO.LeerSupervisor()))
             {
                 FormSupervisor formSupervisor = new FormSupervisor(this, cambiarColor);
                 this.Hide();
@@ -42,7 +43,7 @@ namespace Parcial
         }
         private void dia_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
+            string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info\Configuracion.json";
             Config colores = new Config();
             try
             {
@@ -59,17 +60,18 @@ namespace Parcial
                     colorJs.EscribirJson<Config>(colores);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
-
+                string mensajeExcepcion = "Ese color no existe";
+                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, mensajeExcepcion);
+                throw new Exception(mensajeExcepcion);
             }
 
         }
 
         private void noche_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info\Configuracion.json";
+            string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info\Configuracion.json";
             Config colores = new Config();
             try
             {
@@ -105,7 +107,7 @@ namespace Parcial
             {
                 List<Supervisor> lista = CrudDAO.LeerSupervisor();
 
-                this.nombre.Text = lista[1].Nombre;
+                this.nombre.Text = lista[51].Nombre;
                 this.apellido.Text = lista[1].Apellido;
                 this.id.Value = lista[1].Id;
 

@@ -10,7 +10,7 @@ namespace Parcial
 {
     public class Archivos<T>:Iarchios<T>
     {
-         string path = @"C:\Users\nicol\Desktop\Avila.Daniel.Parcial\Info";
+         string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info";
 
         public bool CrearTxt(string dato)
         {

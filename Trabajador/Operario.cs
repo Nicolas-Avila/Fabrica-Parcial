@@ -1,4 +1,5 @@
-﻿using Parcial;
+﻿using Fabrica;
+using Parcial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Trabajador
 {
-    public class Operario : Empleado
+    public class Operario : Empleado, Iingreso
     {
        public Operario(string nombre, string apellido, int id) : base(nombre,apellido,id)
         {
@@ -18,7 +19,7 @@ namespace Trabajador
         /// <summary>
         /// Verifica el ingreso de un operario con nombre, apellido e ID del operario.
         /// </summary>
-        public override bool Ingreso<T>(string nombre, string apellido, int id, List<T> lista)
+        public  bool ingreso<T>(string nombre, string apellido, int id, List<T> lista)
         {
 
             if (typeof(T) == typeof(Operario))

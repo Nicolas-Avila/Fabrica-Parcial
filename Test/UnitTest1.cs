@@ -35,15 +35,17 @@ namespace Test
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void IngresoSupervisor_PuedeIniciaSecion_DeberiaRetornarTrue()
+        public void CompruebaQueElColorSeaIgualAlJson_DeberiaRetornarTrue()
         {
-            Supervisor supervisor = new Supervisor("", "", 0);
+
+            Archivos<Config> colorJs = new Archivos<Config>();
+            Config coloresJson = colorJs.Leer_JSON<Config>();
             //Arrange
             bool expected = true;
             //Act
-            bool actual = supervisor.Ingreso("testSupevisor", "testSupevisor", 0, CrudDAO.LeerSupervisor());
+            bool actual = coloresJson.ColorClaro == "#58D8EC";
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected , actual);
         }
     }
 }

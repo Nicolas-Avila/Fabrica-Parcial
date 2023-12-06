@@ -493,11 +493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Parcial\\Parcial.csproj",
       "projectName": "Parcial",
-      "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
+      "projectPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Parcial\\Parcial.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Parcial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -514,8 +514,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj"
+            "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Trabajador\\Fabrica.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Trabajador\\Fabrica.csproj"
             }
           }
         }
@@ -548,7 +548,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

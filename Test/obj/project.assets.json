@@ -2761,11 +2761,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Test\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2782,8 +2782,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Trabajador\\Fabrica.csproj"
+            "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Trabajador\\Fabrica.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Trabajador\\Fabrica.csproj"
             }
           }
         }
@@ -2831,7 +2831,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,15 +1,5 @@
-21/11/2023 09:32:06
-Clase:CrudDAO
-Metodo:Actualizar
-Error:A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
-
-21/11/2023 09:32:06
-Clase:CrudDAO
-Metodo:LeerOperarios
-Error:A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
-
-21/11/2023 09:32:06
-Clase:CrudDAO
-Metodo:LeerSupervisor
-Error:A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+6/12/2023 01:21:19
+Clase:Inicio
+Metodo:dia_Click
+Error:Ese color no existe
 

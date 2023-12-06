@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CsFwxBk+sdq6ERQt1ILlnmM8pDhx/jy9IiOP7Ere4S6sIiPEx7ar60MslbS8zppSYZGWiq+LJrjFylRy4A7HXw==",
+  "dgSpecHash": "a47+aba+vtrSfhvEmraZPyD1d5EeGl2k66PrPBO6fdtrl+2Kh+LjI4Xi2upJ3bRaYAceSuHJd3mpb5vRvyxaag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Desktop\\Avila.Daniel.Parcial\\Parcial\\Parcial.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\Desktop\\a\\laboratorio_2_Parcial\\Parcial\\Parcial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
