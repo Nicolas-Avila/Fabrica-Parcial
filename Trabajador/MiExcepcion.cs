@@ -11,10 +11,9 @@ namespace Fabrica
 {
     public class MiExcepcion : Exception
     {
-        public MiExcepcion(string mensaje) : base(mensaje)
-        {
-            Debug.WriteLine("VAMOOOOO");
-        }
+        public MiExcepcion(string mensaje) : base(mensaje) { }
+        public MiExcepcion(string mensaje, Exception inner) : base(mensaje, inner) { }
+        
     }
 }
 

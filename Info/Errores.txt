@@ -1,4 +1,14 @@
-6/12/2023 01:21:19
+6/12/2023 01:31:51
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+6/12/2023 01:32:20
+Clase:Inicio
+Metodo:btnSupervisor_Click
+Error:Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+
+6/12/2023 01:32:28
 Clase:Inicio
 Metodo:dia_Click
 Error:Ese color no existe

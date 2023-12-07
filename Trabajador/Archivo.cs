@@ -10,7 +10,8 @@ namespace Parcial
 {
     public class Archivos<T>:Iarchios<T>
     {
-         string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info";
+
+        string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info");
 
         public bool CrearTxt(string dato)
         {

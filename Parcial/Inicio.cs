@@ -43,7 +43,7 @@ namespace Parcial
         }
         private void dia_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info\Configuracion.json";
+            string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
             Config colores = new Config();
             try
             {
@@ -64,14 +64,14 @@ namespace Parcial
             {
                 string mensajeExcepcion = "Ese color no existe";
                 Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, mensajeExcepcion);
-                throw new Exception(mensajeExcepcion);
+                //throw new Exception(mensajeExcepcion);
             }
 
         }
 
         private void noche_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Info\Configuracion.json";
+            string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
             Config colores = new Config();
             try
             {
@@ -107,14 +107,14 @@ namespace Parcial
             {
                 List<Supervisor> lista = CrudDAO.LeerSupervisor();
 
-                this.nombre.Text = lista[51].Nombre;
+                this.nombre.Text = lista[1].Nombre;
                 this.apellido.Text = lista[1].Apellido;
                 this.id.Value = lista[1].Id;
 
             }
             catch (Exception ex)
             {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
+                throw new MiExcepcion($"Ocurrio un error con el supervisor: {ex.Message}", ex);
             }
         }
 
