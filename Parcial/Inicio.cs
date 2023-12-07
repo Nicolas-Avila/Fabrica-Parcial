@@ -41,58 +41,62 @@ namespace Parcial
                 MessageBox.Show("Ese trabajador no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void dia_Click(object sender, EventArgs e)
+        private async void dia_Click(object sender, EventArgs e)
         {
-            string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
-            Config colores = new Config();
-            try
+            await Task.Run(() =>
             {
-                if (File.Exists(path))
+                string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
+                Config colores = new Config();
+                try
                 {
-                    Archivos<Config> colorJs = new Archivos<Config>();
-                    Config coloresJson = colorJs.Leer_JSON<Config>();
-                    fondo = ColorTranslator.FromHtml(coloresJson.ColorClaro);
-                    cambiarColor(this);
+                    if (File.Exists(path))
+                    {
+                        Archivos<Config> colorJs = new Archivos<Config>();
+                        Config coloresJson = colorJs.Leer_JSON<Config>();
+                        fondo = ColorTranslator.FromHtml(coloresJson.ColorClaro);
+                        cambiarColor(this);
+                    }
+                    else
+                    {
+                        Archivos<Config> colorJs = new Archivos<Config>();
+                        colorJs.EscribirJson<Config>(colores);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Archivos<Config> colorJs = new Archivos<Config>();
-                    colorJs.EscribirJson<Config>(colores);
+                    string mensajeExcepcion = "Ese color no existe";
+                    Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, mensajeExcepcion);
+                    //throw new Exception(mensajeExcepcion);
                 }
-            }
-            catch (Exception)
-            {
-                string mensajeExcepcion = "Ese color no existe";
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, mensajeExcepcion);
-                //throw new Exception(mensajeExcepcion);
-            }
-
+            });
         }
 
-        private void noche_Click(object sender, EventArgs e)
+        private async void noche_Click(object sender, EventArgs e)
         {
-            string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
-            Config colores = new Config();
-            try
+            await Task.Run(() =>
             {
-                if (File.Exists(path))
+                string path = Path.Combine(@"C:\Users\nicol\Desktop\a", @"laboratorio_2_Parcial\Info\Configuracion.json");
+                Config colores = new Config();
+                try
                 {
-                    Archivos<Config> colorJs = new Archivos<Config>();
-                    Config coloresJson = colorJs.Leer_JSON<Config>();
-                    fondo = ColorTranslator.FromHtml(coloresJson.ColorOscuro);
-                    cambiarColor(this);
+                    if (File.Exists(path))
+                    {
+                        Archivos<Config> colorJs = new Archivos<Config>();
+                        Config coloresJson = colorJs.Leer_JSON<Config>();
+                        fondo = ColorTranslator.FromHtml(coloresJson.ColorOscuro);
+                        cambiarColor(this);
+                    }
+                    else
+                    {
+                        Archivos<Config> colorJs = new Archivos<Config>();
+                        colorJs.EscribirJson<Config>(colores);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Archivos<Config> colorJs = new Archivos<Config>();
-                    colorJs.EscribirJson<Config>(colores);
+                    Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                Archivos<string>.error(DateTime.Now, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, ex.Message);
-
-            }
+            });
         }
 
         private void cambiarColor(Form instancia)

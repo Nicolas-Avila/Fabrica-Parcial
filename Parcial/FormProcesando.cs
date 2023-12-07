@@ -1,41 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Parcial
+﻿namespace Parcial
 {
     public partial class FormProcesando : Form
     {
-        private System.Windows.Forms.Timer timer;
+        
 
         public FormProcesando()
         {
             InitializeComponent();
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 3000;
-            timer.Tick += timer1_Tick;
-            timer.Start();
-
-
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void aceptar_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            FormAprobacion formAprobacion = new FormAprobacion();
+            // El usuario seleccionó "Sí" para aplicar barniz
+            ProcesarBarniz(true);
+        }
 
+        private void negar_Click(object sender, EventArgs e)
+        {
+            // El usuario seleccionó "No" para no aplicar barniz
+            ProcesarBarniz(false);
+        }
+
+        private void ProcesarBarniz(bool aplicarBarniz)
+        {
+            // Puedes pasar el estado de aplicarBarniz al siguiente formulario
+            FormAprobacion formAprobacion = new FormAprobacion();
 
             this.Close();
             formAprobacion.Show();
-
         }
-
     }
-
 }

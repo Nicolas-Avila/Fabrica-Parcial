@@ -13,3 +13,58 @@ Clase:Inicio
 Metodo:dia_Click
 Error:Ese color no existe
 
+7/12/2023 11:18:10
+Clase:Inicio
+Metodo:<noche_Click>b__5_0
+Error:Operación no válida a través de subprocesos: Se tuvo acceso al control 'nombre' desde un subproceso distinto a aquel en que lo creó.
+
+7/12/2023 11:18:11
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:18:13
+Clase:Inicio
+Metodo:<noche_Click>b__5_0
+Error:Operación no válida a través de subprocesos: Se tuvo acceso al control 'nombre' desde un subproceso distinto a aquel en que lo creó.
+
+7/12/2023 11:18:14
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:18:14
+Clase:Inicio
+Metodo:<noche_Click>b__5_0
+Error:Operación no válida a través de subprocesos: Se tuvo acceso al control 'nombre' desde un subproceso distinto a aquel en que lo creó.
+
+7/12/2023 11:18:16
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:18:53
+Clase:Inicio
+Metodo:<noche_Click>b__5_0
+Error:Operación no válida a través de subprocesos: Se tuvo acceso al control 'nombre' desde un subproceso distinto a aquel en que lo creó.
+
+7/12/2023 11:18:54
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:22:15
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:22:48
+Clase:Inicio
+Metodo:<dia_Click>b__4_0
+Error:Ese color no existe
+
+7/12/2023 11:22:49
+Clase:Inicio
+Metodo:<noche_Click>b__5_0
+Error:Operación no válida a través de subprocesos: Se tuvo acceso al control 'nombre' desde un subproceso distinto a aquel en que lo creó.
+

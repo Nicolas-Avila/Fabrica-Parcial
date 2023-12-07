@@ -41,7 +41,7 @@
             label1.Size = new Size(142, 15);
             label1.TabIndex = 0;
             label1.Text = "El producto fue aprobado";
-            label1.Click += label1_Click;
+
             // 
             // FormAprobacion
             // 

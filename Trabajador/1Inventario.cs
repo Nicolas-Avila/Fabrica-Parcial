@@ -10,10 +10,10 @@ namespace Parcial
     {
         private static Dictionary<string, int> stock = new Dictionary<string, int>()
         {
-            {"madera", 1 },
-            {"metal", 1 },
-            {"plastico", 1 },
-            {"tela", 1 }
+            {"madera", 10 },
+            {"metal", 10 },
+            {"plastico", 10 },
+            {"tela", 10 }
         };
 
         public static Dictionary<string, int> Stock { get => stock; set => stock = value; }
