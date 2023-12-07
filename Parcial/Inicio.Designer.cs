@@ -138,7 +138,7 @@
             // 
             // btnSupervisor
             // 
-            btnSupervisor.Location = new Point(410, 400);
+            btnSupervisor.Location = new Point(389, 400);
             btnSupervisor.Name = "btnSupervisor";
             btnSupervisor.Size = new Size(133, 47);
             btnSupervisor.TabIndex = 10;

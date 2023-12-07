@@ -76,7 +76,6 @@ C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormCrear.resources
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewOperario.resources
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormNewSupervisor.resources
-C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormProcesando.resources
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormRellenar.resources
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.FormSupervisor.resources
 C:\Users\nicol\Desktop\a\laboratorio_2_Parcial\Parcial\obj\Debug\net6.0-windows\Parcial.Inicio.resources

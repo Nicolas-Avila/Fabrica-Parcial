@@ -10,10 +10,11 @@ namespace Parcial
     {
         private static Dictionary<string, int> stock = new Dictionary<string, int>()
         {
-            {"madera", 10 },
-            {"metal", 10 },
-            {"plastico", 10 },
-            {"tela", 10 }
+            {"madera", 60 },
+            {"metal", 60 },
+            {"plastico", 60 },
+            {"tela", 60 },
+            {"barnis",60 }
         };
 
         public static Dictionary<string, int> Stock { get => stock; set => stock = value; }
@@ -31,7 +32,7 @@ namespace Parcial
         /// <summary>
         ///  Descuenta el material del inventario.
         /// </summary>
-        public static void StockMateriales(string material1, string material2)
+        public static void StockMateriales(string material1, string material2,string material3)
         {
             Random random = new Random();
             foreach (var componente in stock)
@@ -53,11 +54,19 @@ namespace Parcial
                         stock[componente.Key] = 0;
                     }
                 }
+                else if (componente.Key == material3 && componente.Value > 0)
+                {
+                    stock[componente.Key] -= numeroAleatorio;
+                    if (stock[componente.Key] < 0)
+                    {
+                        stock[componente.Key] = 0;
+                    }
+                }
             }
         }
 
 
-        public static bool VerificarStock(string material1, string material2)
+        public static bool VerificarStock(string material1, string material2,string material3)
         {
             var cont = 0;
 
@@ -71,8 +80,12 @@ namespace Parcial
                 {
                     cont += 1;
                 }
+                else if (componente.Key == material3 && componente.Value > 0)
+                {
+                    cont += 1;
+                }
             }
-            if (cont == 2)
+            if (cont == 3)
             {
                 return true;
             }

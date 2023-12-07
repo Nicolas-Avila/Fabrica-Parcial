@@ -16,9 +16,6 @@
     <Compile Update="FormNewSupervisor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormProcesando.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormRellenar.cs">
       <SubType>Form</SubType>
     </Compile>

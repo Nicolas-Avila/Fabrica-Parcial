@@ -30,7 +30,7 @@ namespace Test
             //Arrange
             bool expected = true;
             //Act
-            bool actual = operario.Ingreso("testOperador", "testOperador", 0, CrudDAO.LeerOperarios()) ;
+            bool actual = operario.ingreso("testOperador", "testOperador", 0, CrudDAO.LeerOperarios()) ;
             //Assert
             Assert.AreEqual(expected, actual);
         }

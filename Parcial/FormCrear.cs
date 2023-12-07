@@ -16,7 +16,20 @@ namespace Parcial
         private void CrearSillas_Click(object sender, EventArgs e)
         {
             string silla = this.sillas.Text;
+            string barnis;
+           
+            DialogResult resultado = MessageBox.Show("¿Quieres ponerle barnis?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (resultado == DialogResult.Yes)
+            {
+                barnis = "con barnis";
+
+            }
+            else
+            {
+                barnis = "sin barnis";
+
+            }
             foreach (Control item in sillas.Controls)
             {
                 if (item is RadioButton && ((RadioButton)item).Checked)
@@ -24,24 +37,37 @@ namespace Parcial
                     silla = ((RadioButton)item).Text;
                 }
             }
-            SillaMadera sillaMadera = new SillaMadera("","");
-            bool resultadoSillaMadera = sillaMadera.CrearProducto(silla);
-            SillaMetal sillaMetal = new SillaMetal("", "");
-            bool resultadoSillaMetal = sillaMetal.CrearProducto(silla);
-            if (resultadoSillaMadera || resultadoSillaMetal)
+            SillaMadera sillaMadera = new SillaMadera("","", "");
+            bool resultadoSillaMadera = sillaMadera.CrearProducto(silla, barnis);
+            SillaMetal sillaMetal = new SillaMetal("", "", "");
+            bool resultadoSillaMetal = sillaMetal.CrearProducto(silla, barnis);
+            if (resultadoSillaMadera == true || resultadoSillaMetal == true)
             {
-                 FormProcesando formProcesando = new FormProcesando();
-                 formProcesando.Show();                
+                FormAprobacion aprobacion = new FormAprobacion();
+                aprobacion.Show();
             }
             else
             {
                 MessageBox.Show("Falta de stock");
             }
+
         }
 
         private void CrearMesa_Click(object sender, EventArgs e)
         {
             string mesa = this.mesas.Text;
+            string barnis;
+            
+            DialogResult resultado = MessageBox.Show("¿Quieres ponerle barnis?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                barnis = "con barnis"; 
+            }
+            else
+            {
+                barnis = "sin barnis";
+            }
 
             foreach (Control item in mesas.Controls)//Controls es el groupbox
             {
@@ -50,19 +76,20 @@ namespace Parcial
                     mesa = ((RadioButton)item).Text;
                 }
             }
-            MesaDeMadera mesaDeMadera = new MesaDeMadera("", "");
-            bool resultadoMesaDeMadera = mesaDeMadera.CrearProducto(mesa);
-            MesaMetal mesaMetal = new MesaMetal("", "");
-            bool resultadoMesaMetal = mesaMetal.CrearProducto(mesa);
-            if (resultadoMesaDeMadera || resultadoMesaMetal)
+            MesaDeMadera mesaDeMadera = new MesaDeMadera("", "","");
+            bool resultadoMesaDeMadera = mesaDeMadera.CrearProducto(mesa, barnis);
+            MesaMetal mesaMetal = new MesaMetal("", "", "");
+            bool resultadoMesaMetal = mesaMetal.CrearProducto(mesa, barnis);
+            if ( resultadoMesaDeMadera == true || resultadoMesaMetal == true)
             {
-                FormProcesando formProcesando = new FormProcesando();
-                formProcesando.Show();
+                FormAprobacion aprobacion = new FormAprobacion();
+                aprobacion.Show();
             }
             else
             {
                 MessageBox.Show("Falta de stock");
-            }            
+            }
+
         }
 
         private void VerMaterial_Click(object sender, EventArgs e)

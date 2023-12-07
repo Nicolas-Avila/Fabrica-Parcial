@@ -8,6 +8,6 @@ namespace Fabrica
 {
     internal interface ICreacion
     {
-        bool CrearProducto(string producto);
+        bool CrearProducto(string producto, string barnis);
     }
 }
