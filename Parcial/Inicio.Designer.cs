@@ -138,7 +138,7 @@
             // 
             // btnSupervisor
             // 
-            btnSupervisor.Location = new Point(408, 388);
+            btnSupervisor.Location = new Point(400, 400);
             btnSupervisor.Name = "btnSupervisor";
             btnSupervisor.Size = new Size(133, 47);
             btnSupervisor.TabIndex = 10;
@@ -147,7 +147,7 @@
             // 
             // btnOperario
             // 
-            btnOperario.Location = new Point(222, 388);
+            btnOperario.Location = new Point(214, 400);
             btnOperario.Name = "btnOperario";
             btnOperario.Size = new Size(133, 47);
             btnOperario.TabIndex = 11;

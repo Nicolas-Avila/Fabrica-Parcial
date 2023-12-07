@@ -1,27 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Fabrica;
+using System;
 using System.Windows.Forms;
 using static Parcial.Inicio;
 
 namespace Parcial
 {
-
     public partial class FormRellenar : Form
     {
         protected CambiarColor cambiarColor;
+        private Newsletter newsletter;
+
         public FormRellenar(CambiarColor cambiarColor)
         {
             InitializeComponent();
             this.cambiarColor = cambiarColor;
+
+            // Crea una nueva instancia de Newsletter
+            this.newsletter = new Newsletter("Agregado con Exito");
+            // Suscribor al evento NovedadEnviada
+            newsletter.NovedadEnviada += MostrarMensajeNovedad;
+
             cambiarColor(this);
         }
-
+        
         private void añadir_Click(object sender, EventArgs e)
         {
             int cantTela = (int)this.numericUpDown1.Value;
@@ -48,13 +49,17 @@ namespace Parcial
                     Inventario.Stock[material] += cantMetal;
                 }
             }
-            string mensaje = $"Cantidad de tela: {cantTela.ToString()}\n" +
-                $"Cantidad de metal: {cantMetal.ToString()}\n" +
-                $"Cantidad de madera: {cantMadera.ToString()}\n" +
-                $"Cantidad de plástico: {cantPlastico.ToString()}";
-            MessageBox.Show(mensaje);
+
+            
+            newsletter.EnviarNovedades();
         }
 
+        // Método para manejar el evento NovedadEnviada
+        private void MostrarMensajeNovedad(Newsletter sender, string mensaje)
+        {
+            // Mostrar un MessageBox con la información
+            MessageBox.Show(mensaje, "Agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
     }
 }

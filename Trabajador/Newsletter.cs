@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Clase Newsletter
+using System;
 
 namespace Fabrica
 {
     public class Newsletter
     {
         public delegate void NovedadHandler(Newsletter sender, string mensaje);
-        public event NovedadHandler Novedad;
+        public event NovedadHandler NovedadEnviada;
         private string tema;
 
-        public Newsletter(string tema) {
-            this.tema = tema;        
+        public Newsletter(string tema)
+        {
+            this.tema = tema;
         }
 
         public string Tema => tema;
 
-        public void EnviarNovedad()
+        public void EnviarNovedades()
         {
-            if (Novedad is not null)
+            if (NovedadEnviada is not null)
             {
-                Novedad.Invoke(this, "TEST");
+                NovedadEnviada.Invoke(this, "Stock " + tema);
             }
         }
-
     }
 }

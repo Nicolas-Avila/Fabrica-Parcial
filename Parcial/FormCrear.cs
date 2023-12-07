@@ -13,7 +13,6 @@ namespace Parcial
             this.cambiarColor = cambiarColor;
             cambiarColor(this);
         }
-
         private void CrearSillas_Click(object sender, EventArgs e)
         {
             string silla = this.sillas.Text;
@@ -25,8 +24,19 @@ namespace Parcial
                     silla = ((RadioButton)item).Text;
                 }
             }
-            SillaMadera.CrearSillaMadera(silla);
-            SillaMetal.CrearSillaMetal(silla);
+            SillaMadera sillaMadera = new SillaMadera("","");
+            bool resultadoSillaMadera = sillaMadera.CrearProducto(silla);
+            SillaMetal sillaMetal = new SillaMetal("", "");
+            bool resultadoSillaMetal = sillaMetal.CrearProducto(silla);
+            if (resultadoSillaMadera || resultadoSillaMetal)
+            {
+                 FormProcesando formProcesando = new FormProcesando();
+                 formProcesando.Show();                
+            }
+            else
+            {
+                MessageBox.Show("Falta de stock");
+            }
         }
 
         private void CrearMesa_Click(object sender, EventArgs e)
@@ -40,8 +50,19 @@ namespace Parcial
                     mesa = ((RadioButton)item).Text;
                 }
             }
-            MesaMetal.CrearMesaMetal(mesa);
-            Parcial.MesaMadera.CrearMesaMadera(mesa);
+            MesaDeMadera mesaDeMadera = new MesaDeMadera("", "");
+            bool resultadoMesaDeMadera = mesaDeMadera.CrearProducto(mesa);
+            MesaMetal mesaMetal = new MesaMetal("", "");
+            bool resultadoMesaMetal = mesaMetal.CrearProducto(mesa);
+            if (resultadoMesaDeMadera || resultadoMesaMetal)
+            {
+                FormProcesando formProcesando = new FormProcesando();
+                formProcesando.Show();
+            }
+            else
+            {
+                MessageBox.Show("Falta de stock");
+            }            
         }
 
         private void VerMaterial_Click(object sender, EventArgs e)

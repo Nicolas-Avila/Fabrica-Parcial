@@ -18,6 +18,7 @@ namespace Parcial
     {
         private Inicio formularioInicio;
         protected CambiarColor cambiarColor;
+
         public FormSupervisor(Inicio formularioInicio, CambiarColor cambiarColor)
         {
             InitializeComponent();
